@@ -11,7 +11,7 @@
         <aside class="fixed top-0 left-0 z-50 h-screen bg-white border-r border-slate-400 flex flex-col lg:z-30 lg:w-64 -translate-x-full lg:translate-x-0">
             <div class="flex items-center h-16 px-4 justify-between">
                 <a class="flex items-center gap-3">
-                    <div class="logo w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0"></div>
+                    <div class="logo w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0"></div>
                     <span class="text-xl font-bold text-gray-700">Website</span>
                 </a>
             </div>
@@ -20,7 +20,7 @@
                     <li>
                         <a href="" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-100 bg-primary-50 text-blue-500 fill-current font-medium">
                             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.796 4.136C13.5629 3.89528 13.2838 3.70387 12.9753 3.57315C12.6667 3.44244 12.3351 3.37508 12 3.37508C11.6649 3.37508 11.3333 3.44244 11.0247 3.57315C10.7162 3.70387 10.4371 3.89528 10.204 4.136L5.405 9.092C5.13 9.376 4.945 9.736 4.873 10.126C4.29112 13.3042 4.24819 16.5576 4.746 19.75L4.922 20.88C4.978 21.237 5.286 21.5 5.647 21.5H9C9.13261 21.5 9.25978 21.4473 9.35355 21.3536C9.44732 21.2598 9.5 21.1326 9.5 21V14H14.5V21C14.5 21.1326 14.5527 21.2598 14.6464 21.3536C14.7402 21.4473 14.8674 21.5 15 21.5H18.353C18.5279 21.5006 18.6973 21.4383 18.8302 21.3245C18.963 21.2107 19.0506 21.0529 19.077 20.88L19.254 19.75C19.7518 16.5576 19.7089 13.3042 19.127 10.126C19.0557 9.73614 18.8702 9.37624 18.594 9.092L13.796 4.136Z"/></svg>
-                            <span>Home</span>
+                            <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
@@ -52,9 +52,51 @@
                 </ul>
             </nav>
         </aside>
-        <header></header>
+        <header class="fixed top-0 right-0 z-20 h-16 bg-white border-b border-gray-400 transition-all duration-300 lg:left-64 left-0">
+            <div class="h-full px-4 lg:px-6 flex items-center justify-between gap-4">
+                <div class="flex items-center gap-4"></div>
+                <div class="flex items-center gap-2">
+                    <button type="button" class="text-gray-700 fill-current font-medium relative p-2 rounded-lg hover:bg-gray-100 outline-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V3.75H10.4426C8.21751 3.75 6.37591 5.48001 6.23702 7.70074L6.01601 11.2342C5.93175 12.5814 5.47946 13.8797 4.7084 14.9876C4.01172 15.9886 4.63194 17.3712 5.84287 17.5165L9.25 17.9254V19C9.25 20.5188 10.4812 21.75 12 21.75C13.5188 21.75 14.75 20.5188 14.75 19V17.9254L18.1571 17.5165C19.3681 17.3712 19.9883 15.9886 19.2916 14.9876C18.5205 13.8797 18.0682 12.5814 17.984 11.2342L17.763 7.70074C17.6241 5.48001 15.7825 3.75 13.5574 3.75H13V3ZM10.4426 5.25C9.00958 5.25 7.82354 6.36417 7.73409 7.79438L7.51309 11.3278C7.41169 12.949 6.86744 14.5112 5.93959 15.8444C5.88924 15.9168 5.93406 16.0167 6.02159 16.0272L9.75925 16.4757C11.2477 16.6543 12.7523 16.6543 14.2407 16.4757L17.9784 16.0272C18.0659 16.0167 18.1108 15.9168 18.0604 15.8444C17.1326 14.5112 16.5883 12.949 16.4869 11.3278L16.2659 7.79438C16.1764 6.36417 14.9904 5.25 13.5574 5.25H10.4426ZM12 20.25C11.3096 20.25 10.75 19.6904 10.75 19V18.25H13.25V19C13.25 19.6904 12.6904 20.25 12 20.25Z"/></svg>
+                    </button>
+                    <button type="button" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 outline-none">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-semibold text-sm">
+                            Ad
+                        </div>
+                        <span>Admin</span>
+                    </button>
+                </div>
+            </div>
+        </header>
         <main class="pt-16 transition-all duration-300 lg:ml-64">
-
+            <div class="p-4 lg:p-6">
+                <nav class="flex items-center space-x-2 text-sm mb-6">
+                    <a href="" class="flex items-center text-gray-700 hover:text-blue-500 fill-current">
+                        <svg width="24" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5578 5.53423C12.6873 4.69887 11.3127 4.69887 10.4422 5.53423L5.81574 9.97357C5.70239 10.0823 5.62614 10.224 5.5978 10.3785C5.04367 13.4004 5.00277 16.494 5.47681 19.5295L5.58933 20.25H8.56579V14.0387C8.56579 13.6244 8.90158 13.2887 9.31579 13.2887H14.6842C15.0984 13.2887 15.4342 13.6244 15.4342 14.0387V20.25H18.4107L18.5232 19.5295C18.9972 16.494 18.9563 13.4004 18.4022 10.3785C18.3739 10.224 18.2976 10.0823 18.1843 9.97357L13.5578 5.53423ZM9.40363 4.45191C10.8546 3.05965 13.1454 3.05965 14.5964 4.45191L19.2228 8.89125C19.5634 9.21804 19.7925 9.64373 19.8776 10.108C20.4621 13.2956 20.5053 16.559 20.0052 19.7609L19.8245 20.9184C19.7497 21.3971 19.3374 21.75 18.8529 21.75H14.6842C14.27 21.75 13.9342 21.4142 13.9342 21V14.7887H10.0658V21C10.0658 21.4142 9.73 21.75 9.31579 21.75H5.14706C4.66258 21.75 4.25029 21.3971 4.17554 20.9184L3.99478 19.7609C3.49473 16.559 3.53788 13.2956 4.12241 10.108C4.20754 9.64373 4.43662 9.21804 4.77719 8.89125L9.40363 4.45191Z"/></svg>    
+                    </a>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z"/></svg>
+                    <a href="" class="flex items-center text-gray-700 hover:text-blue-500">Dashboard</a>
+                </nav>
+                <div class="">
+                    <!-- welcome, stuff like that -->
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg p-6 transition-all duration-200 relative overflow-hidden flex items-start justify-between">
+                        <div class="flex-1">
+                            <p class="text-sm font-medium text-gray-700 mb-1">Total Revenue</p>
+                            <p class="text-3xl font-bold text-gray-800 mb-2">Rp120.000</p>
+                            <div class="flex items-center gap-2">
+                                <span class="bg-green-300 rounded-lg px-2 py-0.5 text-xs flex items-center gap-1">
+                                    20%
+                                </span>
+                                <span>from last month</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- copy this for card rows -->
+                </div>
+            </div>
+            
         </main>
     </div>
 </body>

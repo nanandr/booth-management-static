@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </head>
 <body>
-    <div class="min-h-screen bg-gray-200">
+    <div class="flex flex-col min-h-screen bg-gray-200">
         <aside class="fixed top-0 left-0 z-50 h-screen bg-white border-r border-slate-400 flex flex-col lg:z-30 lg:w-64 -translate-x-full lg:translate-x-0">
             <div class="flex items-center h-16 px-4 justify-between">
                 <a href="index.html" class="flex items-center gap-3">
@@ -123,60 +123,8 @@
                 </div>
             </div>
         </header>
-        <main class="pt-16 transition-all duration-300 lg:ml-64">
-            <div class="p-4 lg:p-6">
-                <nav class="flex items-center space-x-2 text-sm mb-6">
-                    <a href="" class="flex items-center text-gray-700 hover:text-blue-500 fill-current">
-                        <svg width="24" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5578 5.53423C12.6873 4.69887 11.3127 4.69887 10.4422 5.53423L5.81574 9.97357C5.70239 10.0823 5.62614 10.224 5.5978 10.3785C5.04367 13.4004 5.00277 16.494 5.47681 19.5295L5.58933 20.25H8.56579V14.0387C8.56579 13.6244 8.90158 13.2887 9.31579 13.2887H14.6842C15.0984 13.2887 15.4342 13.6244 15.4342 14.0387V20.25H18.4107L18.5232 19.5295C18.9972 16.494 18.9563 13.4004 18.4022 10.3785C18.3739 10.224 18.2976 10.0823 18.1843 9.97357L13.5578 5.53423ZM9.40363 4.45191C10.8546 3.05965 13.1454 3.05965 14.5964 4.45191L19.2228 8.89125C19.5634 9.21804 19.7925 9.64373 19.8776 10.108C20.4621 13.2956 20.5053 16.559 20.0052 19.7609L19.8245 20.9184C19.7497 21.3971 19.3374 21.75 18.8529 21.75H14.6842C14.27 21.75 13.9342 21.4142 13.9342 21V14.7887H10.0658V21C10.0658 21.4142 9.73 21.75 9.31579 21.75H5.14706C4.66258 21.75 4.25029 21.3971 4.17554 20.9184L3.99478 19.7609C3.49473 16.559 3.53788 13.2956 4.12241 10.108C4.20754 9.64373 4.43662 9.21804 4.77719 8.89125L9.40363 4.45191Z"/></svg>    
-                    </a>
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z"/></svg>
-                    <a href="" class="flex items-center text-gray-700 hover:text-blue-500">Dashboard</a>
-                </nav>
-                <div class="">
-                    <!-- welcome, stuff like that -->
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-                    <div class="card bg-white rounded-lg p-3 md:p-6 transition-all duration-200 relative overflow-hidden flex items-start justify-between">
-                        <div class="flex-1">
-                            <p class="text-sm font-medium text-gray-700 mb-1">Total Revenue</p>
-                            <p class="text-3xl font-bold text-gray-800 mb-2">Rp120.000</p>
-                            <div class="flex items-center gap-2">
-                                <span class="bg-green-100 border border-green-400 rounded-lg px-2 py-0.5 text-xs flex items-center gap-1">
-                                    20%
-                                </span>
-                                <span>from yesterday</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-white rounded-lg p-3 md:p-6 transition-all duration-200 relative overflow-hidden flex items-start justify-between">
-                        <div class="flex-1">
-                            <p class="text-sm font-medium text-gray-700 mb-1">Total Orders</p>
-                            <p class="text-3xl font-bold text-gray-800 mb-2">100</p>
-                            <div class="flex items-center gap-2">
-                                <span class="bg-green-100 border border-green-400 rounded-lg px-2 py-0.5 text-xs flex items-center gap-1">
-                                    10%
-                                </span>
-                                <span>from yesterday</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card bg-white rounded-lg p-3 md:p-6 transition-all duration-200 relative overflow-hidden flex items-start justify-between">
-                        <div class="flex-1">
-                            <p class="text-sm font-medium text-gray-700 mb-1">Total Products</p>
-                            <p class="text-3xl font-bold text-gray-800 mb-2">25</p>
-                            <!-- <div class="flex items-center gap-2">
-                                <span class="bg-green-100 border border-green-400 rounded-lg px-2 py-0.5 text-xs flex items-center gap-1">
-                                    20%
-                                </span>
-                                <span>from yesterday</span>
-                            </div> -->
-                        </div>
-                    </div>
-                    
-                    <!-- copy this for card rows -->
-                </div>
-            </div>
-            
+        <main class="pt-16 transition-all duration-300 lg:ml-64 flex flex-1">
+            <iframe id="main" src="dashboard.html" class="flex-1" frameborder="0"></iframe>
         </main>
         <footer class="fixed bottom-0 lg:hidden right-0 z-20 h-16 bg-white text-gray-700 border-b border-gray-400 left-0 fill-current">
             <div class="flex items-center justify-between gap-4 h-full mx-auto font-medium">
@@ -204,4 +152,9 @@
         </footer>
     </div>
 </body>
+<script>
+    // changing iframe
+    // const main = document.getElementById('main');
+    // main.src = 'something.html';
+</script>
 </html>

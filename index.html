@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </head>
 <body>
-    <div class="flex flex-col min-h-screen bg-gray-200">
+    <div class="flex flex-col min-h-screen bg-gray-100">
         <aside class="fixed top-0 left-0 z-50 h-screen bg-white border-r border-slate-400 flex flex-col lg:z-30 lg:w-64 -translate-x-full lg:translate-x-0">
             <div class="flex items-center h-16 px-4 justify-between">
                 <a href="index.html" class="flex items-center gap-3">
@@ -114,7 +114,7 @@
                         <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white outline-1 -outline-offset-1 outline-gray-400 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
                             <div class="py-1">
                                 <a href="profile.html" class="block px-4 py-2 text-sm focus:outline-hidden hover:bg-gray-200">Profile</a>
-                                <form action="login.html" method="POST">
+                                <form action="login.html" method="get">
                                     <button type="submit" class="block w-full px-4 py-2 text-left text-sm focus:outline-hidden hover:cursor-pointer hover:bg-gray-200">Sign out</button>
                                 </form>
                             </div>
@@ -123,7 +123,7 @@
                 </div>
             </div>
         </header>
-        <main class="pt-16 transition-all duration-300 lg:ml-64 flex flex-1 md:py-0 py-12">
+        <main class="mt-16 transition-all duration-300 lg:ml-64 flex flex-1 md:py-0 py-12">
             <iframe id="main" src="dashboard.html" class="flex-1" frameborder="0"></iframe>
         </main>
         <footer class="fixed bottom-0 lg:hidden right-0 z-20 h-16 bg-white text-gray-700 border-b border-gray-400 left-0 fill-current border border-gray-400 border-t">

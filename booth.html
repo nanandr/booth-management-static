@@ -24,39 +24,42 @@
             <div class="lg:col-span-2 space-y-6">
                 <div class="card bg-white p-6 rounded-lg shadow transition-all duration-200 space-y-4">
                     <h2 class="text-lg font-semibold text-gray-700">Booth Logo</h2>
-                    <div>
+                    <div class="flex flex-col lg:flex-row gap-4 items-center">
 						<div class="flex flex-col items-center md:items-start mx-auto mb-4">
 							<div class="relative">
-							<div class="w-48 h-48 bg-gray-300 rounded-full overflow-hidden border border-gray-200">
-								<img
-								src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Ffood-stall-line-icon-food-stall-line-icon-outline-vector-sign-linear-style-pictogram-isolated-white-symbol-logo-illustration-100240476.jpg&f=1&nofb=1&ipt=1334c59c111354cffee94e548fcd172dbed6f1ffce87c235392ebfe162b4d8ee"
-								alt="Profile Avatar"
-								class="w-full h-full object-cover"
-								/>
-							</div>
-							<label for="image"
-								class="absolute bottom-0 right-0 bg-blue-500 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors transform translate-x-1 translate-y-1"
-							>
-								<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								>
-								<path
-									d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
-								></path>
-								<path
-									d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
-								></path>
-								</svg>
-							</label>
+                                <div class="w-48 h-48 bg-gray-300 rounded-full overflow-hidden border border-gray-200">
+                                    <img
+                                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Ffood-stall-line-icon-food-stall-line-icon-outline-vector-sign-linear-style-pictogram-isolated-white-symbol-logo-illustration-100240476.jpg&f=1&nofb=1&ipt=1334c59c111354cffee94e548fcd172dbed6f1ffce87c235392ebfe162b4d8ee"
+                                    alt="Profile Avatar"
+                                    class="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <label for="image"
+                                    class="absolute bottom-0 right-0 bg-blue-500 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors transform translate-x-1 translate-y-1"
+                                >
+                                    <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    >
+                                    <path
+                                        d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                                    ></path>
+                                    <path
+                                        d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                                    ></path>
+                                    </svg>
+                                </label>
 							</div>
 						</div>
-                        <input id="image" type="file" accept="image/*" placeholder="0" class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <div class="w-full">
+                            <input id="image" type="file" accept="image/*" placeholder="0" class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <span class="px-4 text-sm text-gray-700">Make sure image is below 5MB</span>
+                        </div>
                     </div>
                 </div>
                 <div class="card bg-white p-6 rounded-lg shadow transition-all duration-200 space-y-4">

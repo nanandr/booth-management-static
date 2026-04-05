@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokoku</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+    <body class="font-[Fredoka]">
+        <div class="flex flex-col min-h-screen bg-gray-100">
+            <header
+            class="fixed top-0 right-0 z-20 h-16 bg-white border-b border-gray-400 transition-all duration-300 left-0">
+                <div class="h-full px-4 lg:px-6 flex items-center justify-between gap-4">
+                    <!-- Mobile logo -->
+                    <a href="#dashboard" data-page="dashboard" class="nav-link flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                            T</div>
+                        <span class="text-xl font-bold text-gray-700">Tokoku</span>
+                    </a>
+                    <div class="flex items-center gap-2 ml-auto">
+                        <a href="login.html" class="font-medium text-blue-500">Sign in</a>
+                    </div>
+                </div>
+            </header>
+
+            <section class="bg-blue-100 py-24 px-6 md:px-12 lg:px-24 overflow-hidden relative text-slate-900">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 mt-12">
+                    
+                    <div class="lg:w-1/2 z-10">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight text-slate-900">
+                            Empowering <br> Artists & Local <br> Businesses.
+                        </h2>
+                        <p class="mt-8 text-lg md:text-xl text-slate-700 leading-relaxed font-medium max-w-xl">
+                            The easiest way to track sales, orders, and items <br class="hidden lg:flex"> for F&B or event merch booths.
+                        </p>
+                    </div>
+
+                    <div class="lg:w-1/2 w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto">
+                            
+                            <div class="bg-white rounded-xl flex flex-col px-8 py-8 shadow relative">
+                                <h3 class="font-bold text-xl mb-4">Starter</h3>
+                                <div class="mb-5">
+                                    <span class="font-bold text-2xl text-blue-500">Free</span>
+                                </div>
+                                <ul class="text-slate-600 mb-5">
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">10 Products</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['X'] before:text-blue-500 before:font-bold before:mr-1">No Analytics</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['X'] before:text-blue-500 before:font-bold before:mr-1">No Custom Catalog</li>
+                                </ul>
+                                <a href="#" class="border-2 border-blue-500 text-blue-500 p-3 text-center w-full block rounded-md font-bold mt-auto hover:bg-blue-50 transition-colors">Start Free</a>
+                            </div>
+
+                            <div class="bg-white rounded-xl flex flex-col px-8 py-8 shadow relative border-2 border-blue-500 sm:scale-105">
+                                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 px-4 py-1 rounded-full text-white font-medium text-sm">Popular</span>
+                                <h3 class="font-bold text-xl mb-4">Pro</h3>
+                                <div class="mb-5">
+                                    <span class="font-bold text-2xl text-blue-500">Rp 199.000</span>
+                                    <span class="text-slate-600">/month</span>
+                                </div>
+                                <ul class="text-slate-600 mb-5">
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">100 Products</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">Sale Analytics</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">Custom Catalog</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">Custom Domain</li>
+                                </ul>   
+                                <a href="#" class="bg-blue-500 text-white p-3 text-center w-full block rounded-md font-bold mt-auto hover:bg-blue-700 transition-colors">Try 14 Days Trial</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="px-6 py-20 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center justify-center">
+                    
+                    <div class="bg-white p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 w-full md:w-[400px]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight">Real-time Sales Tracking</h3>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">See every transaction and KPI, just like in the dashboard reference.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 w-full md:w-[400px]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 11m8 4v10M4 11v10"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight">Effortless Order Management</h3>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Simplify order workflow from start to finish. F&B or merch, we've got you.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 w-full md:w-[400px]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight">Performance Insights</h3>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Gain clarity on revenue and top products to grow your business.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section id="faq" class="py-20 px-4 bg-gray-50">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                    
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        Will I get technical support?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Yes, we provide technical support via WhatsApp and email for all packages.</p>
+                    </details>
+
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        Can I have custom catalog?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Yes, your catalog can be customized to your company's branding.</p>
+                    </details>
+
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        How do I manage a booth?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Simply sign in to the dashboard, and then manage your booth — it's that easy!</p>
+                    </details>
+
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        Is my data secure?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Your data is encrypted and stored on secure servers with daily backups.</p>
+                    </details>
+
+                    </div>
+                </div>
+                </section>
+            <footer class="px-6 py-16 bg-white">
+                <div class="max-w-7xl mx-auto flex gap-16 justify-center text-sm">
+                    <div class="flex flex-col gap-3">
+                        <span class="font-bold text-gray-900 mb-1">Product</span>
+                        <a href="#" class="hover:text-blue-500">Features</a>
+                        <a href="#" class="hover:text-blue-500">Pricing</a>
+                        <a href="#" class="hover:text-blue-500">Integrations</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <span class="font-bold text-gray-900 mb-1">Company</span>
+                        <a href="#" class="hover:text-blue-500">About Us</a>
+                        <a href="#" class="hover:text-blue-500">Contact</a>
+                        <a href="#" class="hover:text-blue-500">Support</a>
+                    </div>
+                </div>
+                <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-gray-100 text-center text-xs text-gray-500">
+                    © 2026 Tokoku. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

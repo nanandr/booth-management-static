@@ -13,297 +13,172 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-[Fredoka]">
-    <div class="flex flex-col min-h-screen bg-gray-100">
-        <aside
-            class="fixed top-0 left-0 z-50 h-screen bg-white border-r border-slate-400 flex flex-col lg:z-30 lg:w-64 -translate-x-full lg:translate-x-0">
-            <div class="flex items-center h-16 px-4 justify-between">
-                <a href="index.html" class="flex items-center gap-3">
-                    <div
-                        class="logo w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+    <body class="font-[Fredoka]">
+        <div class="flex flex-col min-h-screen bg-gray-100">
+            <header
+            class="fixed top-0 right-0 z-20 h-16 bg-white border-b border-gray-400 transition-all duration-300 left-0">
+                <div class="h-full px-4 lg:px-6 flex items-center justify-between gap-4">
+                    <!-- Mobile logo -->
+                    <a href="#dashboard" data-page="dashboard" class="nav-link flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                            T</div>
+                        <span class="text-xl font-bold text-gray-700">Tokoku</span>
+                    </a>
+                    <div class="flex items-center gap-2 ml-auto">
+                        <a href="login.html" class="font-medium text-blue-500">Sign in</a>
                     </div>
-                    <div class="flex flex-col space-y-2 text-gray-700">
-                        <span class="text-xl m-0 font-bold text-gray-700">Nama Toko</span>
-                        <span class="text-xs m-0">by Tokoku</span>
-                    </div>
-                </a>
-            </div>
-            <nav class="flex-1 overflow-y-auto py-4 px-3">
-                <ul class="space-y-1" id="sidebar-nav">
-                    <li>
-                        <a href="#dashboard" data-page="dashboard"
-                            class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-100 fill-current font-medium">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.796 4.136C13.5629 3.89528 13.2838 3.70387 12.9753 3.57315C12.6667 3.44244 12.3351 3.37508 12 3.37508C11.6649 3.37508 11.3333 3.44244 11.0247 3.57315C10.7162 3.70387 10.4371 3.89528 10.204 4.136L5.405 9.092C5.13 9.376 4.945 9.736 4.873 10.126C4.29112 13.3042 4.24819 16.5576 4.746 19.75L4.922 20.88C4.978 21.237 5.286 21.5 5.647 21.5H9C9.13261 21.5 9.25978 21.4473 9.35355 21.3536C9.44732 21.2598 9.5 21.1326 9.5 21V14H14.5V21C14.5 21.1326 14.5527 21.2598 14.6464 21.3536C14.7402 21.4473 14.8674 21.5 15 21.5H18.353C18.5279 21.5006 18.6973 21.4383 18.8302 21.3245C18.963 21.2107 19.0506 21.0529 19.077 20.88L19.254 19.75C19.7518 16.5576 19.7089 13.3042 19.127 10.126C19.0557 9.73614 18.8702 9.37624 18.594 9.092L13.796 4.136Z" />
-                            </svg>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#transactions" data-page="transactions"
-                            class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-100 fill-current font-medium">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.53033 6.53033C7.82322 6.23744 7.82322 5.76256 7.53033 5.46967C7.23744 5.17678 6.76256 5.17678 6.46967 5.46967L4.46967 7.46967C4.17678 7.76256 4.17678 8.23744 4.46967 8.53033L6.46967 10.5303C6.76256 10.8232 7.23744 10.8232 7.53033 10.5303C7.82322 10.2374 7.82322 9.76256 7.53033 9.46967L6.81066 8.75H17C17.4142 8.75 17.75 8.41421 17.75 8C17.75 7.58579 17.4142 7.25 17 7.25H6.81066L7.53033 6.53033Z" />
-                                <path
-                                    d="M16.4697 13.4697C16.1768 13.7626 16.1768 14.2374 16.4697 14.5303L17.1893 15.25H7C6.58579 15.25 6.25 15.5858 6.25 16C6.25 16.4142 6.58579 16.75 7 16.75H17.1893L16.4697 17.4697C16.1768 17.7626 16.1768 18.2374 16.4697 18.5303C16.7626 18.8232 17.2374 18.8232 17.5303 18.5303L19.5303 16.5303C19.8232 16.2374 19.8232 15.7626 19.5303 15.4697L17.5303 13.4697C17.2374 13.1768 16.7626 13.1768 16.4697 13.4697Z" />
-                            </svg>
-                            <span>Transactions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#payment" data-page="payment"
-                            class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-100 fill-current font-medium">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15.5 12C15.5 11.1716 16.1716 10.5 17 10.5C17.8284 10.5 18.5 11.1716 18.5 12C18.5 12.8284 17.8284 13.5 17 13.5C16.1716 13.5 15.5 12.8284 15.5 12Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M20.4413 6.67402C19.7836 5.12836 18.3302 4.01723 16.6007 3.83523L15.9488 3.76664C12.6565 3.42018 9.33575 3.44303 6.04851 3.83475L5.61657 3.88622C3.94777 4.08508 2.62552 5.38889 2.40324 7.05473C1.96528 10.337 1.96528 13.663 2.40324 16.9453C2.62552 18.6111 3.94777 19.9149 5.61657 20.1138L6.04851 20.1653C9.33575 20.557 12.6565 20.5798 15.9488 20.2334L16.6007 20.1648C18.3302 19.9828 19.7836 18.8717 20.4413 17.326C21.4806 17.0166 22.2738 16.1156 22.404 15.0024C22.6373 13.0076 22.6373 10.9924 22.404 8.99764C22.2738 7.88442 21.4806 6.98344 20.4413 6.67402ZM15.7918 5.2584C12.6107 4.92365 9.40218 4.94573 6.226 5.32421L5.79406 5.37568C4.80524 5.49351 4.02177 6.26606 3.89007 7.25312C3.46967 10.4038 3.46967 13.5963 3.89007 16.7469C4.02177 17.734 4.80525 18.5065 5.79406 18.6243L6.226 18.6758C9.40218 19.0543 12.6107 19.0764 15.7918 18.7416L16.4437 18.673C17.2942 18.5835 18.0468 18.1643 18.5683 17.542C17.0602 17.6299 15.532 17.5906 14.0417 17.4241C12.7724 17.2822 11.7458 16.2826 11.5961 15.0024C11.3628 13.0076 11.3628 10.9924 11.5961 8.99764C11.7458 7.71738 12.7724 6.71784 14.0417 6.57597C15.532 6.40942 17.0602 6.37012 18.5683 6.45806C18.0468 5.83574 17.2942 5.4165 16.4437 5.327L15.7918 5.2584ZM19.2774 8.01471C19.278 8.01855 19.2786 8.02239 19.2792 8.02623L19.2852 8.06511L19.4839 8.03426C19.5867 8.04444 19.6893 8.05524 19.7917 8.06669C20.3791 8.13234 20.8468 8.59648 20.9141 9.17189C21.1339 11.0509 21.1339 12.9491 20.9141 14.8281C20.8468 15.4035 20.3791 15.8677 19.7917 15.9333C19.6893 15.9448 19.5866 15.9556 19.4839 15.9658L19.2852 15.9349L19.2792 15.9738C19.2786 15.9776 19.278 15.9815 19.2774 15.9853C17.5987 16.1372 15.8772 16.1199 14.2084 15.9333C13.621 15.8677 13.1532 15.4035 13.0859 14.8281C12.8661 12.9491 12.8661 11.0509 13.0859 9.17189C13.1532 8.59648 13.621 8.13234 14.2084 8.06669C15.8772 7.88017 17.5987 7.86285 19.2774 8.01471Z" />
-                            </svg>
-                            <span>Payment</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#products" data-page="products"
-                            class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-100 fill-current font-medium">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M6.53518 3.25C5.95006 3.25 5.40366 3.54243 5.07909 4.02927L1.48987 9.41311C1.27014 9.74271 1.24386 10.1648 1.42101 10.5191C3.38512 14.4473 6.11467 17.9432 9.44923 20.8014L11.2 22.3021C11.6603 22.6967 12.3397 22.6967 12.8 22.3021L14.5508 20.8014C17.8853 17.9432 20.6149 14.4473 22.579 10.5191C22.7561 10.1648 22.7299 9.74271 22.5101 9.41311L18.9209 4.02927C18.5963 3.54243 18.0499 3.25 17.4648 3.25H6.53518ZM6.32717 4.86132C6.37353 4.79178 6.45159 4.75 6.53518 4.75H8.87499L6.95987 9.34629C6.91576 9.45216 6.88246 9.56135 6.86002 9.67224C6.15619 9.61985 5.45296 9.55669 4.75057 9.48276L3.34486 9.33479L6.32717 4.86132ZM3.27865 10.8361C5.07205 14.1261 7.44021 17.0714 10.2732 19.5312L7.14775 11.1967C6.29541 11.1381 5.44387 11.064 4.59355 10.9745L3.27865 10.8361ZM8.78481 11.2902L12 19.864L15.2152 11.2902C13.0728 11.3876 10.9272 11.3876 8.78481 11.2902ZM16.8523 11.1967L13.7268 19.5312C16.5598 17.0714 18.9279 14.1261 20.7213 10.8361L19.4064 10.9745C18.5561 11.064 17.7046 11.1381 16.8523 11.1967ZM20.6551 9.33479L19.2494 9.48276C18.547 9.55669 17.8438 9.61985 17.14 9.67224C17.1175 9.56135 17.0842 9.45216 17.0401 9.34629L15.125 4.75H17.4648C17.5484 4.75 17.6265 4.79178 17.6728 4.86133L20.6551 9.33479ZM15.5917 9.77005C13.1988 9.89432 10.8012 9.89432 8.4083 9.77005L10.5 4.75H13.5L15.5917 9.77005Z" />
-                            </svg>
-                            <span>Products</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#booth" data-page="booth"
-                            class="nav-link flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 hover:bg-gray-100 fill-current font-medium">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M7.25 6.63098V5.4612C7.25 4.59495 7.88374 3.85906 8.7404 3.73056L9.96032 3.54757C11.3125 3.34474 12.6875 3.34474 14.0397 3.54757L15.2596 3.73056C16.1163 3.85906 16.75 4.59495 16.75 5.4612V6.63098L18.464 6.76933C19.7764 6.87527 20.847 7.86341 21.0574 9.16313C21.5226 12.0357 21.5226 14.9643 21.0574 17.8369C20.847 19.1366 19.7764 20.1247 18.464 20.2307L16.5921 20.3818C13.5357 20.6285 10.4643 20.6285 7.40787 20.3818L5.53595 20.2307C4.22357 20.1247 3.15303 19.1366 2.94255 17.8369C2.47736 14.9643 2.47736 12.0357 2.94255 9.16313C3.15303 7.86341 4.22357 6.87527 5.53596 6.76933L7.25 6.63098ZM10.1828 5.03098C11.3875 4.85027 12.6125 4.85027 13.8172 5.03098L15.0371 5.21396C15.1595 5.23232 15.25 5.33745 15.25 5.4612V6.5258C13.0851 6.40233 10.9149 6.40233 8.75 6.5258V5.4612C8.75 5.33745 8.84053 5.23232 8.96291 5.21396L10.1828 5.03098ZM7.52856 8.11337C10.5047 7.87314 13.4953 7.87314 16.4714 8.11337L18.3433 8.26447C18.9675 8.31485 19.4766 8.78479 19.5767 9.40292C19.6391 9.78785 19.6926 10.1738 19.7372 10.5606C14.8596 12.9624 9.14038 12.9624 4.26278 10.5606C4.30743 10.1738 4.36092 9.78785 4.42326 9.40292C4.52336 8.78479 5.03249 8.31485 5.65664 8.26447L7.52856 8.11337ZM4.12889 12.1567C9.12829 14.4304 14.8717 14.4304 19.8711 12.1567C19.9664 13.9728 19.8683 15.7966 19.5767 17.5971C19.4766 18.2152 18.9675 18.6852 18.3433 18.7355L16.4714 18.8866C13.4953 19.1269 10.5047 19.1269 7.52856 18.8866L5.65664 18.7355C5.03249 18.6852 4.52336 18.2152 4.42326 17.5971C4.13169 15.7966 4.03356 13.9728 4.12889 12.1567Z" />
-                            </svg>
-                            <span>Booth</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- top header -->
-        <header
-            class="fixed top-0 right-0 z-20 h-16 bg-white border-b border-gray-400 transition-all duration-300 lg:left-64 left-0">
-            <div class="h-full px-4 lg:px-6 flex items-center justify-between gap-4">
-                <!-- Mobile logo -->
-                <a href="#dashboard" data-page="dashboard" class="nav-link flex items-center gap-3 lg:hidden">
-                    <div
-                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                        T</div>
-                    <span class="text-xl font-bold text-gray-700">Tokoku</span>
-                </a>
-                <div class="flex items-center gap-2 ml-auto">
-                    <!-- Notifications -->
-                    <el-dropdown>
-                        <button type="button"
-                            class="text-gray-700 fill-current font-medium relative p-2 rounded-lg hover:bg-gray-100 outline-none">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V3.75H10.4426C8.21751 3.75 6.37591 5.48001 6.23702 7.70074L6.01601 11.2342C5.93175 12.5814 5.47946 13.8797 4.7084 14.9876C4.01172 15.9886 4.63194 17.3712 5.84287 17.5165L9.25 17.9254V19C9.25 20.5188 10.4812 21.75 12 21.75C13.5188 21.75 14.75 20.5188 14.75 19V17.9254L18.1571 17.5165C19.3681 17.3712 19.9883 15.9886 19.2916 14.9876C18.5205 13.8797 18.0682 12.5814 17.984 11.2342L17.763 7.70074C17.6241 5.48001 15.7825 3.75 13.5574 3.75H13V3ZM10.4426 5.25C9.00958 5.25 7.82354 6.36417 7.73409 7.79438L7.51309 11.3278C7.41169 12.949 6.86744 14.5112 5.93959 15.8444C5.88924 15.9168 5.93406 16.0167 6.02159 16.0272L9.75925 16.4757C11.2477 16.6543 12.7523 16.6543 14.2407 16.4757L17.9784 16.0272C18.0659 16.0167 18.1108 15.9168 18.0604 15.8444C17.1326 14.5112 16.5883 12.949 16.4869 11.3278L16.2659 7.79438C16.1764 6.36417 14.9904 5.25 13.5574 5.25H10.4426ZM12 20.25C11.3096 20.25 10.75 19.6904 10.75 19V18.25H13.25V19C13.25 19.6904 12.6904 20.25 12 20.25Z" />
-                            </svg>
-                        </button>
-                        <el-menu anchor="bottom end" popover
-                            class="w-72 origin-top-right rounded-md bg-white outline-1 -outline-offset-1 outline-gray-400 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                            <div class="py-1">
-                                <div class="px-4 py-3 border-b border-gray-400">
-                                    <span>Notifications</span>
-                                </div>
-                                <div class="max-h-96 overflow-y-auto">
-                                    <button type="button"
-                                        class="w-full px-4 py-3 text-left transition-colors border-b border-gray-400 last:border-0 hover:bg-gray-200 bg-white">
-                                        <div class="flex gap-3">
-                                            <div
-                                                class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-green-400 bg-green-100">
-                                                ✓</div>
-                                            <div class="flex-1 min-w-0">
-                                                <p class="text-sm font-medium text-gray-700 truncate">Order Completed
-                                                </p>
-                                                <p class="text-xs text-gray-500 mt-1">5 minutes ago</p>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </div>
-                                <div class="px-4 py-3 border-t border-gray-400">
-                                    <a href="#notifications" data-page="notifications"
-                                        class="nav-link text-blue-500">View all notifications</a>
-                                </div>
-                            </div>
-                        </el-menu>
-                    </el-dropdown>
-
-                    <!-- User menu -->
-                    <el-dropdown>
-                        <button type="button"
-                            class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-100 outline-none">
-                            <div
-                                class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-semibold text-sm">
-                                Ad</div>
-                            <span class="hidden md:inline">Admin</span>
-                        </button>
-                        <el-menu anchor="bottom end" popover
-                            class="w-56 origin-top-right rounded-md bg-white outline-1 -outline-offset-1 outline-gray-400 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                            <div class="py-1">
-                                <a href="#profile" data-page="profile"
-                                    class="block px-4 py-2 text-sm focus:outline-hidden hover:bg-gray-200">Profile</a>
-                                <form action="login.html" method="get">
-                                    <button type="submit"
-                                        class="block w-full px-4 py-2 text-left text-sm focus:outline-hidden hover:cursor-pointer hover:bg-gray-200">Sign
-                                        out</button>
-                                </form>
-                            </div>
-                        </el-menu>
-                    </el-dropdown>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <!-- kotnen utama dalem satu iframe, nggak perlu iframe banyak -->
-        <main class="pt-16 pb-16 lg:pb-0 transition-all duration-300 lg:ml-64 flex flex-1 h-[calc(100vh-4rem)]">
-            <iframe id="main-frame" src="dashboard.html" class="flex-1 w-full border-0 max-lg:h-[calc(100vh-8rem)] h-[calc(100vh-4rem)]"></iframe>
-        </main>
+            <section class="py-24 px-6 md:px-12 lg:px-24 overflow-hidden relative text-white">
+                <div class="absolute inset-0 z-0 bg-cover" style="background-image: url('https://www.anime-expo.org/wp-content/uploads/2017/04/anime-expo-los-angeles-convention-explore-exhibit-hall.jpg');"></div>
+                <div class="absolute inset-0 z-0 bg-slate-900/60"></div> <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 mt-12 relative z-10">
+                    
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
+                            Empowering <br> Artists & Local <br> Businesses.
+                        </h2>
+                        <p class="mt-8 text-lg md:text-xl text-slate-200 leading-relaxed font-medium max-w-xl">
+                            The easiest way to track sales, orders, and items <br class="hidden lg:flex"> for F&B or event merch booths.
+                        </p>
+                    </div>
 
-        <!-- mobile bottom navigation -->
-        <footer
-            class="fixed bottom-0 lg:hidden right-0 z-20 h-16 bg-white text-gray-700 border-t border-gray-400 left-0 fill-current">
-            <div class="flex items-center justify-between gap-4 h-full mx-auto font-medium">
-                <button data-page="dashboard"
-                    class="mobile-nav-btn text-blue-500 inline-flex flex-col flex-1 items-center justify-center px-5 hover:bg-gray-200 group py-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.796 4.136C13.5629 3.89528 13.2838 3.70387 12.9753 3.57315C12.6667 3.44244 12.3351 3.37508 12 3.37508C11.6649 3.37508 11.3333 3.44244 11.0247 3.57315C10.7162 3.70387 10.4371 3.89528 10.204 4.136L5.405 9.092C5.13 9.376 4.945 9.736 4.873 10.126C4.29112 13.3042 4.24819 16.5576 4.746 19.75L4.922 20.88C4.978 21.237 5.286 21.5 5.647 21.5H9C9.13261 21.5 9.25978 21.4473 9.35355 21.3536C9.44732 21.2598 9.5 21.1326 9.5 21V14H14.5V21C14.5 21.1326 14.5527 21.2598 14.6464 21.3536C14.7402 21.4473 14.8674 21.5 15 21.5H18.353C18.5279 21.5006 18.6973 21.4383 18.8302 21.3245C18.963 21.2107 19.0506 21.0529 19.077 20.88L19.254 19.75C19.7518 16.5576 19.7089 13.3042 19.127 10.126C19.0557 9.73614 18.8702 9.37624 18.594 9.092L13.796 4.136Z" />
-                    </svg>
-                </button>
-                <button data-page="transactions"
-                    class="mobile-nav-btn inline-flex flex-col flex-1 items-center justify-center px-5 hover:bg-gray-200 group py-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.53033 6.53033C7.82322 6.23744 7.82322 5.76256 7.53033 5.46967C7.23744 5.17678 6.76256 5.17678 6.46967 5.46967L4.46967 7.46967C4.17678 7.76256 4.17678 8.23744 4.46967 8.53033L6.46967 10.5303C6.76256 10.8232 7.23744 10.8232 7.53033 10.5303C7.82322 10.2374 7.82322 9.76256 7.53033 9.46967L6.81066 8.75H17C17.4142 8.75 17.75 8.41421 17.75 8C17.75 7.58579 17.4142 7.25 17 7.25H6.81066L7.53033 6.53033Z" />
-                        <path
-                            d="M16.4697 13.4697C16.1768 13.7626 16.1768 14.2374 16.4697 14.5303L17.1893 15.25H7C6.58579 15.25 6.25 15.5858 6.25 16C6.25 16.4142 6.58579 16.75 7 16.75H17.1893L16.4697 17.4697C16.1768 17.7626 16.1768 18.2374 16.4697 18.5303C16.7626 18.8232 17.2374 18.8232 17.5303 18.5303L19.5303 16.5303C19.8232 16.2374 19.8232 15.7626 19.5303 15.4697L17.5303 13.4697C17.2374 13.1768 16.7626 13.1768 16.4697 13.4697Z" />
-                    </svg>
-                </button>
-                <button data-page="payment"
-                    class="mobile-nav-btn inline-flex flex-col flex-1 items-center justify-center px-5 hover:bg-gray-200 group py-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M15.5 12C15.5 11.1716 16.1716 10.5 17 10.5C17.8284 10.5 18.5 11.1716 18.5 12C18.5 12.8284 17.8284 13.5 17 13.5C16.1716 13.5 15.5 12.8284 15.5 12Z" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M20.4413 6.67402C19.7836 5.12836 18.3302 4.01723 16.6007 3.83523L15.9488 3.76664C12.6565 3.42018 9.33575 3.44303 6.04851 3.83475L5.61657 3.88622C3.94777 4.08508 2.62552 5.38889 2.40324 7.05473C1.96528 10.337 1.96528 13.663 2.40324 16.9453C2.62552 18.6111 3.94777 19.9149 5.61657 20.1138L6.04851 20.1653C9.33575 20.557 12.6565 20.5798 15.9488 20.2334L16.6007 20.1648C18.3302 19.9828 19.7836 18.8717 20.4413 17.326C21.4806 17.0166 22.2738 16.1156 22.404 15.0024C22.6373 13.0076 22.6373 10.9924 22.404 8.99764C22.2738 7.88442 21.4806 6.98344 20.4413 6.67402ZM15.7918 5.2584C12.6107 4.92365 9.40218 4.94573 6.226 5.32421L5.79406 5.37568C4.80524 5.49351 4.02177 6.26606 3.89007 7.25312C3.46967 10.4038 3.46967 13.5963 3.89007 16.7469C4.02177 17.734 4.80525 18.5065 5.79406 18.6243L6.226 18.6758C9.40218 19.0543 12.6107 19.0764 15.7918 18.7416L16.4437 18.673C17.2942 18.5835 18.0468 18.1643 18.5683 17.542C17.0602 17.6299 15.532 17.5906 14.0417 17.4241C12.7724 17.2822 11.7458 16.2826 11.5961 15.0024C11.3628 13.0076 11.3628 10.9924 11.5961 8.99764C11.7458 7.71738 12.7724 6.71784 14.0417 6.57597C15.532 6.40942 17.0602 6.37012 18.5683 6.45806C18.0468 5.83574 17.2942 5.4165 16.4437 5.327L15.7918 5.2584ZM19.2774 8.01471C19.278 8.01855 19.2786 8.02239 19.2792 8.02623L19.2852 8.06511L19.4839 8.03426C19.5867 8.04444 19.6893 8.05524 19.7917 8.06669C20.3791 8.13234 20.8468 8.59648 20.9141 9.17189C21.1339 11.0509 21.1339 12.9491 20.9141 14.8281C20.8468 15.4035 20.3791 15.8677 19.7917 15.9333C19.6893 15.9448 19.5866 15.9556 19.4839 15.9658L19.2852 15.9349L19.2792 15.9738C19.2786 15.9776 19.278 15.9815 19.2774 15.9853C17.5987 16.1372 15.8772 16.1199 14.2084 15.9333C13.621 15.8677 13.1532 15.4035 13.0859 14.8281C12.8661 12.9491 12.8661 11.0509 13.0859 9.17189C13.1532 8.59648 13.621 8.13234 14.2084 8.06669C15.8772 7.88017 17.5987 7.86285 19.2774 8.01471Z" />
-                    </svg>
-                </button>
-                <button data-page="products"
-                    class="mobile-nav-btn inline-flex flex-col flex-1 items-center justify-center px-5 hover:bg-gray-200 group py-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M6.53518 3.25C5.95006 3.25 5.40366 3.54243 5.07909 4.02927L1.48987 9.41311C1.27014 9.74271 1.24386 10.1648 1.42101 10.5191C3.38512 14.4473 6.11467 17.9432 9.44923 20.8014L11.2 22.3021C11.6603 22.6967 12.3397 22.6967 12.8 22.3021L14.5508 20.8014C17.8853 17.9432 20.6149 14.4473 22.579 10.5191C22.7561 10.1648 22.7299 9.74271 22.5101 9.41311L18.9209 4.02927C18.5963 3.54243 18.0499 3.25 17.4648 3.25H6.53518ZM6.32717 4.86132C6.37353 4.79178 6.45159 4.75 6.53518 4.75H8.87499L6.95987 9.34629C6.91576 9.45216 6.88246 9.56135 6.86002 9.67224C6.15619 9.61985 5.45296 9.55669 4.75057 9.48276L3.34486 9.33479L6.32717 4.86132ZM3.27865 10.8361C5.07205 14.1261 7.44021 17.0714 10.2732 19.5312L7.14775 11.1967C6.29541 11.1381 5.44387 11.064 4.59355 10.9745L3.27865 10.8361ZM8.78481 11.2902L12 19.864L15.2152 11.2902C13.0728 11.3876 10.9272 11.3876 8.78481 11.2902ZM16.8523 11.1967L13.7268 19.5312C16.5598 17.0714 18.9279 14.1261 20.7213 10.8361L19.4064 10.9745C18.5561 11.064 17.7046 11.1381 16.8523 11.1967ZM20.6551 9.33479L19.2494 9.48276C18.547 9.55669 17.8438 9.61985 17.14 9.67224C17.1175 9.56135 17.0842 9.45216 17.0401 9.34629L15.125 4.75H17.4648C17.5484 4.75 17.6265 4.79178 17.6728 4.86133L20.6551 9.33479ZM15.5917 9.77005C13.1988 9.89432 10.8012 9.89432 8.4083 9.77005L10.5 4.75H13.5L15.5917 9.77005Z" />
-                    </svg>
-                </button>
-                <button data-page="booth"
-                    class="mobile-nav-btn inline-flex flex-col flex-1 items-center justify-center px-5 hover:bg-gray-200 group py-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M7.25 6.63098V5.4612C7.25 4.59495 7.88374 3.85906 8.7404 3.73056L9.96032 3.54757C11.3125 3.34474 12.6875 3.34474 14.0397 3.54757L15.2596 3.73056C16.1163 3.85906 16.75 4.59495 16.75 5.4612V6.63098L18.464 6.76933C19.7764 6.87527 20.847 7.86341 21.0574 9.16313C21.5226 12.0357 21.5226 14.9643 21.0574 17.8369C20.847 19.1366 19.7764 20.1247 18.464 20.2307L16.5921 20.3818C13.5357 20.6285 10.4643 20.6285 7.40787 20.3818L5.53595 20.2307C4.22357 20.1247 3.15303 19.1366 2.94255 17.8369C2.47736 14.9643 2.47736 12.0357 2.94255 9.16313C3.15303 7.86341 4.22357 6.87527 5.53596 6.76933L7.25 6.63098ZM10.1828 5.03098C11.3875 4.85027 12.6125 4.85027 13.8172 5.03098L15.0371 5.21396C15.1595 5.23232 15.25 5.33745 15.25 5.4612V6.5258C13.0851 6.40233 10.9149 6.40233 8.75 6.5258V5.4612C8.75 5.33745 8.84053 5.23232 8.96291 5.21396L10.1828 5.03098ZM7.52856 8.11337C10.5047 7.87314 13.4953 7.87314 16.4714 8.11337L18.3433 8.26447C18.9675 8.31485 19.4766 8.78479 19.5767 9.40292C19.6391 9.78785 19.6926 10.1738 19.7372 10.5606C14.8596 12.9624 9.14038 12.9624 4.26278 10.5606C4.30743 10.1738 4.36092 9.78785 4.42326 9.40292C4.52336 8.78479 5.03249 8.31485 5.65664 8.26447L7.52856 8.11337ZM4.12889 12.1567C9.12829 14.4304 14.8717 14.4304 19.8711 12.1567C19.9664 13.9728 19.8683 15.7966 19.5767 17.5971C19.4766 18.2152 18.9675 18.6852 18.3433 18.7355L16.4714 18.8866C13.4953 19.1269 10.5047 19.1269 7.52856 18.8866L5.65664 18.7355C5.03249 18.6852 4.52336 18.2152 4.42326 17.5971C4.13169 15.7966 4.03356 13.9728 4.12889 12.1567Z" />
-                    </svg>
-                </button>
-            </div>
-        </footer>
-    </div>
+                    <div class="lg:w-1/2 w-full text-slate-900">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto">
+                            
+                            <div class="bg-white rounded-xl flex flex-col px-8 py-8 shadow relative">
+                                <h3 class="font-bold text-xl mb-4">Starter</h3>
+                                <div class="mb-5">
+                                    <span class="font-bold text-2xl text-blue-500">Free</span>
+                                </div>
+                                <ul class="text-slate-600 mb-5">
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">10 Products</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['X'] before:text-blue-500 before:font-bold before:mr-1">No Analytics</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['X'] before:text-blue-500 before:font-bold before:mr-1">No Custom Catalog</li>
+                                </ul>
+                                <a href="#" class="border-2 border-blue-500 text-blue-500 p-3 text-center w-full block rounded-md font-bold mt-auto hover:bg-blue-50 transition-colors">Start Free</a>
+                            </div>
 
-    <script>
-        // semua halaman htmlnya taro disini
-        const pages = {
-            'dashboard':            'dashboard.html',
-            'booth':                'booth.html',
-            'transactions':         'transactions/index.html',
-            'transactions-week':         'transactions/week.html',
-            'transactions-form':    'transactions/form.html',
-            'transactions-table': 'transactions/table.html',
-            'payment':              'payment/index.html',
-            'transactions-payment': 'transactions/payment.html',
-            'products':             'products/index.html',
-            'products-form':        'products/form.html',
-            'profile':              'profile.html',
-            'notifications':        'notifications.html',
-        };
+                            <div class="bg-white rounded-xl flex flex-col px-8 py-8 shadow relative border-2 border-blue-500 sm:scale-105">
+                                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 px-4 py-1 rounded-full text-white font-medium text-sm">Popular</span>
+                                <h3 class="font-bold text-xl mb-4">Pro</h3>
+                                <div class="mb-5">
+                                    <span class="font-bold text-2xl text-blue-500">Rp 199.000</span>
+                                    <span class="text-slate-600">/month</span>
+                                </div>
+                                <ul class="text-slate-600 mb-5">
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">100 Products</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">Sale Analytics</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">Custom Catalog</li>
+                                    <li class="py-2 text-sm border-b border-slate-200 before:content-['✓'] before:text-blue-500 before:font-bold before:mr-1">Custom Domain</li>
+                                </ul>   
+                                <a href="#" class="bg-blue-500 text-white p-3 text-center w-full block rounded-md font-bold mt-auto hover:bg-blue-700 transition-colors">Try 14 Days Trial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="px-6 py-24 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center justify-center">
+                    
+                    <div class="bg-white p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 w-full md:w-[400px]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight">Real-time Sales Tracking</h3>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">See every transaction and KPI, just like in the dashboard reference.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        const frame = document.getElementById('main-frame'); // ambil element <iframe> (main-frame)
-        const navLinks = document.querySelectorAll('.nav-link[data-page]'); // ambil semua elemen nav-link yang ada atribut data-pagenya
-        const mobileBtns = document.querySelectorAll('.mobile-nav-btn[data-page]'); // ini buat mobile nav
+                    <div class="bg-white p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 w-full md:w-[400px]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 11m8 4v10M4 11v10"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight">Effortless Order Management</h3>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Simplify order workflow from start to finish. F&B or merch, we've got you.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        /* LOGS */
-        // liat ini di console kalau masih bingung
-        console.log(`frame.src currently in frame: ${frame.src}`)
-        console.log(`location hash: ${location.hash}`)
-        navLinks.forEach((link, i) => {
-            console.log(`navlinks ${i}: ${link}`)
-        })
+                    <div class="bg-white p-8 border border-gray-100 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 w-full md:w-[400px]">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100">
+                                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold tracking-tight">Performance Insights</h3>
+                                <p class="text-gray-600 mt-2 text-sm leading-relaxed">Gain clarity on revenue and top products to grow your business.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        /* function buat bikin text nya biru berdasarkan page yagn aktiv */
-        function setActive(page) {
-            navLinks.forEach(link => {
-                const isActive = link.dataset.page === page;
-                link.classList.toggle('text-blue-500', isActive);
-                link.classList.toggle('text-gray-700', !isActive);
-                link.classList.toggle('bg-blue-50', isActive);
-            });
-            mobileBtns.forEach(btn => {
-                btn.classList.toggle('text-blue-500', btn.dataset.page === page);
-                btn.classList.toggle('text-gray-500', btn.dataset.page !== page);
-            });
-        }
+                </div>
+            </section>
+            <section id="faq" class="py-20 px-4 bg-gray-50">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                    
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        Will I get technical support?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Yes, we provide technical support via WhatsApp and email for all packages.</p>
+                    </details>
 
-        // function buat navigasi halaman
-        function navigate(page) {
-            if (!pages[page]) return;// return nothing kalau ga ada page yang dituju     
-            frame.contentWindow.location.replace(pages[page]); // set frame.src jadi page yang dituju
-            setActive(page); // set active page jadi page yang dituju
-            location.hash = page; // ngeganti '#something' di url jadi halaman yang dituju, misal #profile
-        }
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        Can I have custom catalog?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Yes, your catalog can be customized to your company's branding.</p>
+                    </details>
 
-        // kasih event listener click buat tiap navlink
-        navLinks.forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                navigate(link.dataset.page);
-            });
-        });
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        How do I manage a booth?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Simply sign in to the dashboard, and then manage your booth — it's that easy!</p>
+                    </details>
 
-        // button mobile juga
-        mobileBtns.forEach(btn => {
-            btn.addEventListener('click', () => navigate(btn.dataset.page));
-        });
+                    <details class="bg-white rounded-xl px-6 py-4 shadow-sm group">
+                        <summary class="font-medium text-sm cursor-pointer list-none flex justify-between items-center">
+                        Is my data secure?
+                        <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <p class="mt-3 text-sm text-gray-500">Your data is encrypted and stored on secure servers with daily backups.</p>
+                    </details>
 
-        // function buat handle hash # di URL
-        // simpelnya ini function buat ngehandle back button biar user bisa ke halaman sebelumyna
-        function handleHash() {
-            const page = location.hash.replace('#', '') || 'dashboard'; // 
-            navigate(page);
-        }
-
-        // function buat handle postMessage dari Iframe
-        function handleIframeMessage(message) {
-            if (message.data.type == 'dashboard') {
-                location.hash = "#dashboard";
-            } else if (message.data.type == 'page') {
-                location.hash = `#${message.data.to}`;
-            }
-        }
-
-        // kasih evetn litstern hashchange ke window
-        window.addEventListener('hashchange', handleHash);
-        handleHash();
-        // kasih evetn litstern postMessage ke window
-        window.addEventListener('message', handleIframeMessage);
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-</body>
-
+                    </div>
+                </div>
+                </section>
+            <footer class="px-6 py-16 bg-white">
+                <div class="max-w-7xl mx-auto flex gap-16 justify-center text-sm">
+                    <div class="flex flex-col gap-3">
+                        <span class="font-bold text-gray-900 mb-1">Product</span>
+                        <a href="#" class="hover:text-blue-500">Features</a>
+                        <a href="#" class="hover:text-blue-500">Pricing</a>
+                        <a href="#" class="hover:text-blue-500">Integrations</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <span class="font-bold text-gray-900 mb-1">Company</span>
+                        <a href="#" class="hover:text-blue-500">About Us</a>
+                        <a href="#" class="hover:text-blue-500">Contact</a>
+                        <a href="#" class="hover:text-blue-500">Support</a>
+                    </div>
+                </div>
+                <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-gray-100 text-center text-xs text-gray-500">
+                    © 2026 Tokoku. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </body>
 </html>

@@ -20,6 +20,7 @@
                 <form action="index.html" method="post" class="mt-6 flex flex-col space-y-4">
                     <div class="flex items-center">
                         <input
+                            required
                             class="w-full px-8 py-4 pl-12 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                             type="email" placeholder="Email" />
                         <div class="absolute translate-x-4 fill-current">
@@ -28,6 +29,8 @@
                     </div>
                     <div class="flex items-center relative">
                         <input
+                            required
+                            id="password"
                             class="w-full px-8 py-4 pl-12 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                             type="password" placeholder="Password" />
                         <div class="absolute translate-x-4 fill-current">
@@ -97,4 +100,20 @@
         </main>
     </div>
 </body>
+<script>
+    const password = document.getElementById('password');
+    const eyeOpen = document.getElementById('eye-open');
+    const eyeClose = document.getElementById('eye-close');
+    
+    eyeOpen.addEventListener('click', () => {
+        eyeOpen.style.display = 'none';
+        eyeClose.style.display = 'block';
+        password.type = 'text';
+    });
+    eyeClose.addEventListener('click', () => {
+        eyeClose.style.display = 'none';
+        eyeOpen.style.display = 'block';
+        password.type = 'password';
+    });
+</script>
 </html>

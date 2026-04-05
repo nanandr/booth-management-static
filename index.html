@@ -181,7 +181,7 @@
         // function buat navigasi halaman
         function navigate(page) {
             if (!pages[page]) return;// return nothing kalau ga ada page yang dituju     
-            frame.src = pages[page]; // set frame.src jadi page yang dituju
+            frame.contentWindow.location.replace(pages[page]); // set frame.src jadi page yang dituju
             setActive(page); // set active page jadi page yang dituju
             location.hash = page; // ngeganti '#something' di url jadi halaman yang dituju, misal #profile
         }
@@ -209,6 +209,13 @@
         // kasih evetn litstern hashchange ke window
         window.addEventListener('hashchange', handleHash);
         handleHash();
+
+
+        // ------------------------------------
+
+        function goToDashboard() {
+            location.hash = "#dashboard";
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>

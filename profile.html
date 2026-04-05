@@ -10,7 +10,7 @@
     <div class="p-4 lg:p-6 min-h-screen">
       <nav class="flex items-center space-x-2 text-sm mb-6">
         <a
-          onclick="parent.goToDashboard()"
+          onclick="parent.postMessage({ 'type': 'dashboard' }, '*')"
           class="flex items-center text-gray-700 hover:text-blue-500 fill-current"
         >
           <svg

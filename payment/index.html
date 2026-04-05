@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: transparent;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 400;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="p-4 lg:p-6 min-h-screen">
+        <nav class="flex items-center space-x-2 text-sm mb-6">
+            <a onclick="parent.postMessage({ 'type': 'dashboard' }, '*')"
+                class="flex items-center text-gray-700 hover:text-blue-500 fill-current">
+                <svg width="24" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.5578 5.53423C12.6873 4.69887 11.3127 4.69887 10.4422 5.53423L5.81574 9.97357C5.70239 10.0823 5.62614 10.224 5.5978 10.3785C5.04367 13.4004 5.00277 16.494 5.47681 19.5295L5.58933 20.25H8.56579V14.0387C8.56579 13.6244 8.90158 13.2887 9.31579 13.2887H14.6842C15.0984 13.2887 15.4342 13.6244 15.4342 14.0387V20.25H18.4107L18.5232 19.5295C18.9972 16.494 18.9563 13.4004 18.4022 10.3785C18.3739 10.224 18.2976 10.0823 18.1843 9.97357L13.5578 5.53423ZM9.40363 4.45191C10.8546 3.05965 13.1454 3.05965 14.5964 4.45191L19.2228 8.89125C19.5634 9.21804 19.7925 9.64373 19.8776 10.108C20.4621 13.2956 20.5053 16.559 20.0052 19.7609L19.8245 20.9184C19.7497 21.3971 19.3374 21.75 18.8529 21.75H14.6842C14.27 21.75 13.9342 21.4142 13.9342 21V14.7887H10.0658V21C10.0658 21.4142 9.73 21.75 9.31579 21.75H5.14706C4.66258 21.75 4.25029 21.3971 4.17554 20.9184L3.99478 19.7609C3.49473 16.559 3.53788 13.2956 4.12241 10.108C4.20754 9.64373 4.43662 9.21804 4.77719 8.89125L9.40363 4.45191Z" />
+                </svg>
+            </a>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" />
+            </svg>
+            <a href="" class="flex items-center text-gray-700 hover:text-blue-500">Payment</a>
+        </nav>
+
+        <!-- payment header -->
+        <div class="bg-white rounded-lg p-4 md:p-6 mb-6 flex flex-col md:flex-row md:items-center gap-4">
+            <h1 class="text-xl md:text-3xl font-bold text-gray-800 flex-1">Payment</h1>
+            <div class="flex flex-col sm:flex-row gap-2 md:ml-auto">
+                <button onclick="openLinkAccountDialog()"
+                    class="flex flex-1 w-full items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-700 text-white px-4 md:px-6 py-2 rounded-lg transition-colors font-medium">
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                    </svg>
+                    <span>Link Account</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- connected accounts -->
+        <div class="bg-white rounded-lg p-4 md:p-6">
+            <h2 class="text-lg font-semibold text-gray-700">Connected Accounts</h2>
+
+            <!-- card list -->
+            <div class="grid lg:grid-rows-2 lg:grid-column-2 grid-rows-3 grid-flow-col gap-2">
+                <div class="w-full flex px-2 py-3">
+                    <img src="../img/dana-logo.svg" width="32">
+                    <div class="w-full ms-[10px]">
+                        <p class="text-xl">Dana</p>
+                        <p class="text-sm text-[#2F855A]">+ Rp 52.500 (This month)</p>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button class="px-3 py-1">
+                            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10.75a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0v-5a.75.75 0 0 1 .75-.75Z">
+                                </path>
+                                <path d="M12 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M3.25 12a8.75 8.75 0 1 1 17.5 0 8.75 8.75 0 0 1-17.5 0ZM12 4.75a7.25 7.25 0 1 0 0 14.5 7.25 7.25 0 0 0 0-14.5Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" onclick="openDisconnectAccountDialog()">
+                            <svg width="36" height="36" fill="white" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.066 8.995a.75.75 0 1 0-1.06-1.061L12 10.939 8.995 7.934a.75.75 0 1 0-1.06 1.06L10.938 12l-3.005 3.005a.75.75 0 0 0 1.06 1.06L12 13.06l3.005 3.006a.75.75 0 0 0 1.06-1.06L13.062 12l3.005-3.005Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-full flex px-2 py-3">
+                    <img src="../img/ovo-logo.svg" width="32">
+                    <div class="w-full ms-[10px]">
+                        <p class="text-xl">OVO</p>
+                        <p class="text-sm text-[#888888]">Rp 0 (This month)</p>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button class="px-3 py-1">
+                            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10.75a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0v-5a.75.75 0 0 1 .75-.75Z">
+                                </path>
+                                <path d="M12 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M3.25 12a8.75 8.75 0 1 1 17.5 0 8.75 8.75 0 0 1-17.5 0ZM12 4.75a7.25 7.25 0 1 0 0 14.5 7.25 7.25 0 0 0 0-14.5Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" onclick="openDisconnectAccountDialog()">
+                            <svg width="36" height="36" fill="white" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.066 8.995a.75.75 0 1 0-1.06-1.061L12 10.939 8.995 7.934a.75.75 0 1 0-1.06 1.06L10.938 12l-3.005 3.005a.75.75 0 0 0 1.06 1.06L12 13.06l3.005 3.006a.75.75 0 0 0 1.06-1.06L13.062 12l3.005-3.005Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-full flex px-2 py-3">
+                    <img src="../img/jago-logo.svg" width="32">
+                    <div class="w-full ms-[10px]">
+                        <p class="text-xl">Bank Jago</p>
+                        <p class="text-sm text-[#2F855A]">+ Rp 2.250 (This month)</p>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button class="px-3 py-1">
+                            <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 10.75a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0v-5a.75.75 0 0 1 .75-.75Z">
+                                </path>
+                                <path d="M12 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M3.25 12a8.75 8.75 0 1 1 17.5 0 8.75 8.75 0 0 1-17.5 0ZM12 4.75a7.25 7.25 0 1 0 0 14.5 7.25 7.25 0 0 0 0-14.5Z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" onclick="openDisconnectAccountDialog()">
+                            <svg width="36" height="36" fill="white" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.066 8.995a.75.75 0 1 0-1.06-1.061L12 10.939 8.995 7.934a.75.75 0 1 0-1.06 1.06L10.938 12l-3.005 3.005a.75.75 0 0 0 1.06 1.06L12 13.06l3.005 3.006a.75.75 0 0 0 1.06-1.06L13.062 12l3.005-3.005Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-center mt-7">
+                <img src="../img/powered-by-midtrans.svg">
+            </div>
+            <p class="mt-3 text-sm/[1.2] text-[#818181] text-center">Payment service provided by Midtrans, a third
+                party payment gateway provider.<br />
+                See their <a href="https://midtrans.com/promoenginetnc" target="_top"
+                    class="text-[#3182CE] underline">terms of
+                    service</a> and <a href="https://midtrans.com/privacy-notice" target="_top"
+                    class="text-[#3182CE] underline">privacy policy</a>.</p>
+        </div>
+    </div>
+
+    <iframe id="link-account-dialog" src="./link-account-dialog.html"
+        class="hidden fixed top-0 left-0 z-20 w-full h-full"></iframe>
+
+    <iframe id="disconnect-account-dialog" src="./disconnect-account-dialog.html"
+        class="hidden fixed top-0 left-0 z-20 w-full h-full"></iframe>
+
+    <script>
+        const linkAccountDialog = document.querySelector('#link-account-dialog');
+        const disconnectAccountDialog = document.querySelector('#disconnect-account-dialog');
+
+        function openLinkAccountDialog() {
+            // reload dialog without using location.reload() as it's prevented by cors
+            linkAccountDialog.src = './a';
+            linkAccountDialog.style.display = 'block';
+            linkAccountDialog.src = './link-account-dialog.html';
+        }
+        function closeLinkAccountDialog() {
+            linkAccountDialog.style.display = 'none';
+        }
+
+        function openDisconnectAccountDialog() {
+            disconnectAccountDialog.style.display = 'block';
+        }
+        function closeDisconnectAccountDialog() {
+            disconnectAccountDialog.style.display = 'none';
+        }
+
+        function handleIframeMessage(message) {
+            if (message.data.type == 'link-account-dialog-close') {
+                closeLinkAccountDialog();
+            } else if (message.data.type == 'disconnect-account-dialog-close') {
+                closeDisconnectAccountDialog();
+            }
+        }
+
+        // kasih evetn litstern postMessage ke window
+        window.addEventListener('message', handleIframeMessage);
+    </script>
+</body>
+
+</html>

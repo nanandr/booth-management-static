@@ -165,10 +165,8 @@
         </header>
 
         <!-- kotnen utama dalem satu iframe, nggak perlu iframe banyak -->
-        <main class="pt-16 pb-16 lg:pb-0 transition-all duration-300 lg:ml-64 flex flex-1"
-            style="min-height: calc(100vh - 4rem);">
-            <iframe id="main-frame" src="dashboard.html" class="flex-1 w-full border-0"
-                style="height: calc(100vh - 4rem);"></iframe>
+        <main class="pt-16 pb-16 lg:pb-0 transition-all duration-300 lg:ml-64 flex flex-1 h-[calc(100vh-4rem)]">
+            <iframe id="main-frame" src="dashboard.html" class="flex-1 w-full border-0 max-lg:h-[calc(100vh-8rem)] h-[calc(100vh-4rem)]"></iframe>
         </main>
 
         <!-- mobile bottom navigation -->
@@ -225,8 +223,8 @@
             'booth':                'booth.html',
             'transactions':         'transactions.html',
             'transactions-form':    'transactions/form.html',
-            'transactions-payment':              'transactions/payment.html',
-            'payment':              'payment.html',
+            'payment':              'payment/index.html',
+            'transactions-payment': 'transactions/payment.html',
             'products':             'products/index.html',
             'products-form':        'products/form.html',
             'profile':              'profile.html',

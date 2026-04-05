@@ -52,8 +52,7 @@
         <div class="bg-white rounded-lg p-4 md:p-6 mb-6 flex flex-col md:flex-row md:items-center gap-4">
             <h1 class="text-xl md:text-3xl font-bold text-gray-800 flex-1">Payment</h1>
             <div class="flex flex-col sm:flex-row gap-2 md:ml-auto">
-                <button
-                    onclick="openLinkAccountDialog()"
+                <button onclick="openLinkAccountDialog()"
                     class="flex flex-1 w-full items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-700 text-white px-4 md:px-6 py-2 rounded-lg transition-colors font-medium">
                     <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor">
@@ -90,7 +89,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" command="show-modal" commandfor="dialog">
+                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" onclick="openDisconnectAccountDialog()">
                             <svg width="36" height="36" fill="white" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -120,7 +119,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" command="show-modal" commandfor="dialog">
+                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" onclick="openDisconnectAccountDialog()">
                             <svg width="36" height="36" fill="white" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -150,7 +149,7 @@
                                     clip-rule="evenodd"></path>
                             </svg>
                         </button>
-                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" command="show-modal" commandfor="dialog">
+                        <button class="px-3 py-1 bg-[#E53E3E] rounded-lg" onclick="openDisconnectAccountDialog()">
                             <svg width="36" height="36" fill="white" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -174,77 +173,38 @@
         </div>
     </div>
 
-
-    <!-- delete dialog -->
-    <el-dialog>
-        <dialog id="dialog" aria-labelledby="dialog-title"
-            class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
-            <el-dialog-backdrop
-                class="fixed inset-0 bg-[#00000050] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
-
-            <div tabindex="0"
-                class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
-                <el-dialog-panel
-                    class="relative transform overflow-hidden rounded-2xl bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-md data-closed:sm:translate-y-0 data-closed:sm:scale-95">
-                    <div class="bg-white px-5 pt-5 pb-6">
-                        <div class="sm:flex flex-col sm:items-center">
-                            <div class="flex gap-2">
-                                <svg width="68" height="68" fill="#E53E3E" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M7.345 4.017a42.253 42.253 0 0 1 9.31 0c1.713.192 3.095 1.541 3.296 3.26a40.66 40.66 0 0 1 0 9.445 3.734 3.734 0 0 1-3.296 3.26 42.123 42.123 0 0 1-9.31 0 3.734 3.734 0 0 1-3.296-3.26 40.652 40.652 0 0 1 0-9.444 3.734 3.734 0 0 1 3.295-3.26ZM8.47 8.47a.75.75 0 0 1 1.06 0L12 10.94l2.47-2.47a.75.75 0 1 1 1.06 1.06L13.06 12l2.47 2.47a.75.75 0 0 1-1.06 1.06L12 13.06l-2.47 2.47a.75.75 0 1 1-1.06-1.06L10.94 12 8.47 9.53a.75.75 0 0 1 0-1.06Z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <img src="../img/dana-logo.svg" width="60">
-                            </div>
-                            <div class="text-center mt-3">
-                                <h3 id="dialog-title" class="text-2xl text-center font-semibold text-gray-800">
-                                    Disconnect <strong>Dana</strong>?
-                                </h3>
-                                <div class="mt-2">
-                                    <p class="text-lg/[125%]">
-                                        All your balance will remain intact. You can reconnect your account later.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white px-5 pt-0 pb-6 sm:flex sm:flex-row-reverse sm:px-6">
-                        <button type="button" command="close" commandfor="dialog"
-                            class="inline-flex w-full justify-center rounded-xl bg-[#C53030] px-3 py-2 text-lg font-semibold text-white hover:bg-[#C53030] sm:ml-3 cursor-pointer">
-                            Disconnect
-                        </button>
-                        <button type="button" command="close" commandfor="dialog"
-                            class="mt-3 inline-flex w-full justify-center rounded-xl bg-white/10 px-3 py-2 text-lg font-semibold border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 sm:mt-0 cursor-pointer">
-                            Cancel
-                        </button>
-                    </div>
-                </el-dialog-panel>
-            </div>
-        </dialog>
-    </el-dialog>
-
     <iframe id="link-account-dialog" src="./link-account-dialog.html"
+        class="hidden fixed top-0 left-0 z-20 w-full h-full"></iframe>
+
+    <iframe id="disconnect-account-dialog" src="./disconnect-account-dialog.html"
         class="hidden fixed top-0 left-0 z-20 w-full h-full"></iframe>
 
     <script>
         const linkAccountDialog = document.querySelector('#link-account-dialog');
+        const disconnectAccountDialog = document.querySelector('#disconnect-account-dialog');
 
         function openLinkAccountDialog() {
             // reload dialog without using location.reload() as it's prevented by cors
             linkAccountDialog.src = './a';
             linkAccountDialog.style.display = 'block';
             linkAccountDialog.src = './link-account-dialog.html';
-
         }
         function closeLinkAccountDialog() {
             linkAccountDialog.style.display = 'none';
         }
 
-        // function buat handle postMessage dari Iframe
+        function openDisconnectAccountDialog() {
+            disconnectAccountDialog.style.display = 'block';
+        }
+        function closeDisconnectAccountDialog() {
+            disconnectAccountDialog.style.display = 'none';
+        }
+
         function handleIframeMessage(message) {
             if (message.data.type == 'link-account-dialog-close') {
                 closeLinkAccountDialog();
+            } else if (message.data.type == 'disconnect-account-dialog-close') {
+                closeDisconnectAccountDialog();
             }
         }
 

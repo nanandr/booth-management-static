@@ -12,7 +12,7 @@
 <body class="bg-gray-100 antialiased">
     <div class="p-4 lg:p-6">
         <nav class="flex items-center space-x-2 text-sm mb-6">
-            <a onclick="parent.goToDashboard()"
+            <a onclick="parent.postMessage({ 'type': 'dashboard' }, '*')"
                 class="flex items-center text-gray-700 hover:text-blue-500 fill-current">
                 <svg width="24" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"

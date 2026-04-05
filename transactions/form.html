@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +11,12 @@
 <body class="font-['Manrope']">
     <div class="p-4 lg:p-6">
         <nav class="flex items-center space-x-2 text-sm mb-6">
-            <a onclick="parent.postMessage({ 'type': 'dashboard' }, '*')"
-                class="flex items-center text-gray-700 hover:text-blue-500 hover:cursor-pointer fill-current">
-                <svg width="24" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M13.5578 5.53423C12.6873 4.69887 11.3127 4.69887 10.4422 5.53423L5.81574 9.97357C5.70239 10.0823 5.62614 10.224 5.5978 10.3785C5.04367 13.4004 5.00277 16.494 5.47681 19.5295L5.58933 20.25H8.56579V14.0387C8.56579 13.6244 8.90158 13.2887 9.31579 13.2887H14.6842C15.0984 13.2887 15.4342 13.6244 15.4342 14.0387V20.25H18.4107L18.5232 19.5295C18.9972 16.494 18.9563 13.4004 18.4022 10.3785C18.3739 10.224 18.2976 10.0823 18.1843 9.97357L13.5578 5.53423ZM9.40363 4.45191C10.8546 3.05965 13.1454 3.05965 14.5964 4.45191L19.2228 8.89125C19.5634 9.21804 19.7925 9.64373 19.8776 10.108C20.4621 13.2956 20.5053 16.559 20.0052 19.7609L19.8245 20.9184C19.7497 21.3971 19.3374 21.75 18.8529 21.75H14.6842C14.27 21.75 13.9342 21.4142 13.9342 21V14.7887H10.0658V21C10.0658 21.4142 9.73 21.75 9.31579 21.75H5.14706C4.66258 21.75 4.25029 21.3971 4.17554 20.9184L3.99478 19.7609C3.49473 16.559 3.53788 13.2956 4.12241 10.108C4.20754 9.64373 4.43662 9.21804 4.77719 8.89125L9.40363 4.45191Z" />
-                </svg>
+            <a onclick="parent.postMessage({ 'type': 'dashboard' }, '*')" class="flex items-center text-gray-700 hover:text-blue-500 hover:cursor-pointer fill-current">
+                <svg width="24" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5578 5.53423C12.6873 4.69887 11.3127 4.69887 10.4422 5.53423L5.81574 9.97357C5.70239 10.0823 5.62614 10.224 5.5978 10.3785C5.04367 13.4004 5.00277 16.494 5.47681 19.5295L5.58933 20.25H8.56579V14.0387C8.56579 13.6244 8.90158 13.2887 9.31579 13.2887H14.6842C15.0984 13.2887 15.4342 13.6244 15.4342 14.0387V20.25H18.4107L18.5232 19.5295C18.9972 16.494 18.9563 13.4004 18.4022 10.3785C18.3739 10.224 18.2976 10.0823 18.1843 9.97357L13.5578 5.53423ZM9.40363 4.45191C10.8546 3.05965 13.1454 3.05965 14.5964 4.45191L19.2228 8.89125C19.5634 9.21804 19.7925 9.64373 19.8776 10.108C20.4621 13.2956 20.5053 16.559 20.0052 19.7609L19.8245 20.9184C19.7497 21.3971 19.3374 21.75 18.8529 21.75H14.6842C14.27 21.75 13.9342 21.4142 13.9342 21V14.7887H10.0658V21C10.0658 21.4142 9.73 21.75 9.31579 21.75H5.14706C4.66258 21.75 4.25029 21.3971 4.17554 20.9184L3.99478 19.7609C3.49473 16.559 3.53788 13.2956 4.12241 10.108C4.20754 9.64373 4.43662 9.21804 4.77719 8.89125L9.40363 4.45191Z"/></svg>    
             </a>
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" />
-            </svg>
-            <a onclick="parent.postMessage({ 'type': 'page', 'to': 'transactions-week' }, '*')"
-                class="flex items-center text-gray-700 hover:text-blue-500">Transactions</a>
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" />
-            </svg>
-            <a onclick="parent.postMessage({ 'type': 'page', 'to': 'transactions-table' }, '*')" class="flex items-center text-gray-700 hover:text-blue-500">April 2026 - Week 2</a>
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" />
-            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z"/></svg>
+            <a onclick="parent.postMessage({ 'type': 'page', 'to': 'transactions' }, '*')" class="flex items-center text-gray-700 hover:text-blue-500 hover:cursor-pointer">Transactions</a>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z"/></svg>
             <a href="" class="flex items-center text-gray-700 hover:text-blue-500">Create Invoice</a>
         </nav>
         <div class="mb-6">
@@ -47,14 +30,6 @@
                         <h2 class="text-lg font-semibold text-gray-700 flex-1">Items</h2>
                         <button id="add-item" type="button" class="flex items-center space-x-2 p-2 border-blue-500 border-2 text-blue-500 hover:bg-blue-700 text-blue-500 hover:text-white rounded-lg transition-colors fill-current">
                             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7.00739 12C7.00739 11.5858 7.34317 11.25 7.75739 11.25H11.25V7.75735C11.25 7.34314 11.5858 7.00735 12 7.00735C12.4142 7.00735 12.75 7.34314 12.75 7.75735V11.25H16.2427C16.6569 11.25 16.9927 11.5858 16.9927 12C16.9927 12.4142 16.6569 12.75 16.2427 12.75H12.75V16.2426C12.75 16.6569 12.4142 16.9926 12 16.9926C11.5858 16.9926 11.25 16.6569 11.25 16.2426V12.75H7.75739C7.34317 12.75 7.00739 12.4142 7.00739 12Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.31673 3.76876C10.4043 3.42368 13.5957 3.42368 16.6832 3.76876C18.5096 3.97288 19.9845 5.41153 20.1994 7.24849C20.5686 10.4054 20.5686 13.5946 20.1994 16.7515C19.9845 18.5885 18.5096 20.0271 16.6832 20.2313C13.5957 20.5763 10.4043 20.5763 7.31673 20.2313C5.49035 20.0271 4.01545 18.5885 3.8006 16.7515C3.43137 13.5946 3.43137 10.4054 3.8006 7.24849C4.01545 5.41153 5.49035 3.97288 7.31673 3.76876ZM16.5166 5.25948C13.5398 4.92677 10.4602 4.92677 7.48334 5.25948C6.33891 5.38738 5.42286 6.29063 5.29045 7.42274C4.93476 10.4639 4.93476 13.5361 5.29045 16.5773C5.42286 17.7094 6.33891 18.6126 7.48334 18.7405C10.4602 19.0732 13.5398 19.0732 16.5166 18.7405C17.6611 18.6126 18.5771 17.7094 18.7095 16.5773C19.0652 13.5361 19.0652 10.4639 18.7095 7.42274C18.5771 6.29063 17.6611 5.38738 16.5166 5.25948Z"/></svg>
-                        <button type="button"
-                            class="flex items-center space-x-2 p-2 border-blue-500 border-2 text-blue-500 hover:bg-blue-700 text-blue-500 hover:text-white rounded-lg transition-colors fill-current">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.00739 12C7.00739 11.5858 7.34317 11.25 7.75739 11.25H11.25V7.75735C11.25 7.34314 11.5858 7.00735 12 7.00735C12.4142 7.00735 12.75 7.34314 12.75 7.75735V11.25H16.2427C16.6569 11.25 16.9927 11.5858 16.9927 12C16.9927 12.4142 16.6569 12.75 16.2427 12.75H12.75V16.2426C12.75 16.6569 12.4142 16.9926 12 16.9926C11.5858 16.9926 11.25 16.6569 11.25 16.2426V12.75H7.75739C7.34317 12.75 7.00739 12.4142 7.00739 12Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M7.31673 3.76876C10.4043 3.42368 13.5957 3.42368 16.6832 3.76876C18.5096 3.97288 19.9845 5.41153 20.1994 7.24849C20.5686 10.4054 20.5686 13.5946 20.1994 16.7515C19.9845 18.5885 18.5096 20.0271 16.6832 20.2313C13.5957 20.5763 10.4043 20.5763 7.31673 20.2313C5.49035 20.0271 4.01545 18.5885 3.8006 16.7515C3.43137 13.5946 3.43137 10.4054 3.8006 7.24849C4.01545 5.41153 5.49035 3.97288 7.31673 3.76876ZM16.5166 5.25948C13.5398 4.92677 10.4602 4.92677 7.48334 5.25948C6.33891 5.38738 5.42286 6.29063 5.29045 7.42274C4.93476 10.4639 4.93476 13.5361 5.29045 16.5773C5.42286 17.7094 6.33891 18.6126 7.48334 18.7405C10.4602 19.0732 13.5398 19.0732 16.5166 18.7405C17.6611 18.6126 18.5771 17.7094 18.7095 16.5773C19.0652 13.5361 19.0652 10.4639 18.7095 7.42274C18.5771 6.29063 17.6611 5.38738 16.5166 5.25948Z" />
-                            </svg>
                             <span>Add Item</span>
                         </button>
                     </div>
@@ -63,16 +38,16 @@
                             <button type="button" onclick="removeCard(this)" class="hover:cursor-pointer ml-auto">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.46447 15.5355L15.5355 8.46446" stroke="black" stroke-width="1.5" stroke-linecap="round"/><path d="M8.46447 8.46447L15.5355 15.5355" stroke="black" stroke-width="1.5" stroke-linecap="round"/></svg>
                             </button>
-                    <div class="flex flex-col gap-4">
-                        <div
-                            class="flex flex-1 flex-col md:flex-row gap-4 items-center py-2 border-l-3 pl-3 border-blue-500">
                             <div class="w-full flex-1">
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
                                     Product Name *
                                 </label>
-                                <input list="name" type="text" placeholder="Enter product name.."
+                                <input list="name" type="text"
+                                    placeholder="Enter product name.."
                                     class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    required value="Poster A5">
+                                    required
+                                    value="Poster A5"
+                                    >
                                 <datalist id="name">
                                     <option value="Poster Asa Mitaka">
                                     <option value="Sticker Jujutsu Kaisen Gojo">
@@ -84,7 +59,8 @@
                                 <label for="qty" class="block text-sm font-medium text-gray-700 mb-2">
                                     Qty *
                                 </label>
-                                <input id="qty" type="number" placeholder="0" min="0" value="1"
+                                <input id="qty" type="number"
+                                    placeholder="0" min="0" value="1"
                                     class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     required>
                             </div>
@@ -92,17 +68,17 @@
                                 <label for="qty" class="block text-sm font-medium text-gray-700 mb-2">
                                     Price
                                 </label>
-                                <input id="price" type="number" placeholder="Rp" min="0" value="10000"
+                                <input id="price" type="number"
+                                    placeholder="Rp" min="0" value="10000"
                                     class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    required readonly>
+                                    required
+                                    readonly>
                             </div>
                         </div>
                         <div class="card flex flex-1 flex-col md:flex-row gap-4 items-center py-2 border-l-3 pl-3 border-blue-500 hover:bg-gray-100 pr-1">
                             <button type="button" onclick="removeCard(this)" class="hover:cursor-pointer ml-auto">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.46447 15.5355L15.5355 8.46446" stroke="black" stroke-width="1.5" stroke-linecap="round"/><path d="M8.46447 8.46447L15.5355 15.5355" stroke="black" stroke-width="1.5" stroke-linecap="round"/></svg>
                             </button>
-                        <div
-                            class="flex flex-1 flex-col md:flex-row gap-4 items-center py-2 border-l-3 pl-3 border-blue-500">
                             <div class="w-full flex-1">
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
                                     Product Name *
@@ -211,11 +187,8 @@
                 </div>
                 <div class="card bg-white p-6 rounded-lg shadow transition-all duration-200 space-y-4">
                     <div>
-                        <label for="method" class="block text-sm font-medium text-gray-700 mb-2">Payment Method
-                            *</label>
-                        <select id="method"
-                            class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required>
+                        <label for="method" class="block text-sm font-medium text-gray-700 mb-2">Payment Method *</label>
+                        <select id="method" class="w-full px-4 py-2 border border-gray-200 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                             <option disabled selected>Choose payment method</option>
                             <option value="cash">Cash</option>
                             <option value="qris">QRIS</option>
@@ -234,79 +207,14 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.46967 8.46966C8.76256 8.17677 9.23744 8.17677 9.53033 8.46966L12 10.9393L14.4697 8.46967C14.7626 8.17678 15.2374 8.17678 15.5303 8.46967C15.8232 8.76256 15.8232 9.23744 15.5303 9.53033L13.0607 12L15.5303 14.4697C15.8232 14.7626 15.8232 15.2374 15.5303 15.5303C15.2374 15.8232 14.7626 15.8232 14.4697 15.5303L12 13.0607L9.53034 15.5303C9.23744 15.8232 8.76257 15.8232 8.46968 15.5303C8.17678 15.2374 8.17678 14.7626 8.46968 14.4697L10.9393 12L8.46967 9.53032C8.17678 9.23743 8.17678 8.76255 8.46967 8.46966Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.31673 3.76876C10.4043 3.42368 13.5957 3.42368 16.6832 3.76876C18.5096 3.97288 19.9845 5.41153 20.1994 7.24849C20.5686 10.4054 20.5686 13.5946 20.1994 16.7515C19.9845 18.5885 18.5096 20.0271 16.6832 20.2313C13.5957 20.5763 10.4043 20.5763 7.31673 20.2313C5.49035 20.0271 4.01545 18.5885 3.8006 16.7515C3.43137 13.5946 3.43137 10.4054 3.8006 7.24849C4.01545 5.41153 5.49035 3.97288 7.31673 3.76876ZM16.5166 5.25948C13.5398 4.92677 10.4602 4.92677 7.48334 5.25948C6.33891 5.38738 5.42286 6.29063 5.29045 7.42274C4.93476 10.4639 4.93476 13.5361 5.29045 16.5773C5.42286 17.7094 6.33891 18.6126 7.48334 18.7405C10.4602 19.0732 13.5398 19.0732 16.5166 18.7405C17.6611 18.6126 18.5771 17.7094 18.7095 16.5773C19.0652 13.5361 19.0652 10.4639 18.7095 7.42274C18.5771 6.29063 17.6611 5.38738 16.5166 5.25948Z"/></svg>
                         <span>Cancel</span>
                     </button>
-
-                    <!-- DIALOG -->
                     <el-dialog>
-                        <dialog id="save-dialog" aria-labelledby="dialog-title"
-                            class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
-                            <el-dialog-backdrop
-                                class="fixed inset-0 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
-                            <div tabindex="0"
-                                class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
-                                <el-dialog-panel
-                                    class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
-                                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <dialog id="cancel-dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+                            <el-dialog-backdrop class="fixed inset-0 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+                                <div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+                                    <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+                                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                         <div class="sm:flex flex-col sm:items-center">
-                                            <!-- <div
-                                          class="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-500/10 sm:mx-0 sm:size-10"
-                                        >
-                                          <svg
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="1.5"
-                                            data-slot="icon"
-                                            aria-hidden="true"
-                                            class="size-6 text-red-400"
-                                          >
-                                            <path
-                                              d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                            />
-                                          </svg>
-                                        </div> -->
-                                            <div class="text-center">
-                                                <h3 id="dialog-title"
-                                                    class="text-lg text-center font-semibold text-gray-800">
-                                                    Create Invoice?
-                                                </h3>
-                                                <div class="mt-2">
-                                                    <p class="text-sm text-gray-400">
-                                                        You can always change this later.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                                        <button type="button" command="close" commandfor="save-dialog"
-                                            class="inline-flex w-full justify-center rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-400 sm:ml-3 cursor-pointer">
-                                            Save
-                                        </button>
-                                        <button type="button" command="close" commandfor="save-dialog"
-                                            class="mt-3 inline-flex w-full justify-center rounded-md bg-white/10 px-3 py-2 text-sm font-semibold border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 sm:mt-0 cursor-pointer">
-                                            Cancel
-                                        </button>
-                                    </div>
-                                </el-dialog-panel>
-                            </div>
-                        </dialog>
-                    </el-dialog>
-
-                    <!-- Cancel Dialog -->
-                    <el-dialog>
-                        <dialog id="cancel-dialog" aria-labelledby="dialog-title"
-                            class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
-                            <el-dialog-backdrop
-                                class="fixed inset-0 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
-                            <div tabindex="0"
-                                class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
-                                <el-dialog-panel
-                                    class="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl outline -outline-offset-1 outline-white/10 transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
-                                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                                        <div class="sm:flex flex-col sm:items-center">
-                                            <!-- <div
+                                        <!-- <div
                                           class="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-500/10 sm:mx-0 sm:size-10"
                                         >
                                           <svg
@@ -378,5 +286,4 @@
         cart.appendChild(clone);
     });
 </script>
-
 </html>

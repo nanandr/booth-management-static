@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="font-['Manrope']">
     <div class="p-4 lg:p-6">
       <nav class="flex items-center space-x-2 text-sm mb-6">
         <a
@@ -127,13 +128,15 @@
         <div
           class="rounded-lg transition-all duration-200 relative overflow-hidden flex items-start justify-between flex-1 gap-2"
         >
-          <button
-            type="button"
-            class="flex items-center space-x-2 w-full h-full p-4 border border-blue-500 border-2 text-blue-500 hover:bg-blue-700 hover:text-white rounded-lg transition-colors fill-current"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 7.25V7.13012C7.25 4.96238 8.71761 3.06964 10.8171 2.52979C11.5931 2.33024 12.4069 2.33024 13.1829 2.52979C15.2824 3.06964 16.75 4.96238 16.75 7.13013V7.25H18.2511C18.8224 7.25 19.3072 7.66898 19.3901 8.23423L19.6087 9.72668C20.0393 12.6651 20.0393 15.6507 19.6087 18.5891C19.4008 20.0081 18.2565 21.1052 16.83 21.2531L16.2011 21.3183C13.4079 21.608 10.5921 21.608 7.79887 21.3183L7.17 21.2531C5.74346 21.1052 4.59917 20.0081 4.39125 18.5891C3.96071 15.6507 3.96071 12.6651 4.39125 9.72668L4.60993 8.23423C4.69275 7.66898 5.17759 7.25 5.74887 7.25H7.25ZM11.1906 3.98252C11.7216 3.84599 12.2784 3.84599 12.8094 3.98252C14.2458 4.3519 15.25 5.64693 15.25 7.13013V7.25H8.75V7.13012C8.75 5.64693 9.75415 4.3519 11.1906 3.98252ZM7.25 8.75V11C7.25 11.4142 7.58579 11.75 8 11.75C8.41421 11.75 8.75 11.4142 8.75 11V8.75H15.25V11C15.25 11.4142 15.5858 11.75 16 11.75C16.4142 11.75 16.75 11.4142 16.75 11V8.75H17.9496L18.1246 9.94414C18.534 12.7384 18.534 15.5774 18.1246 18.3717C18.0161 19.1118 17.4193 19.684 16.6753 19.7611L16.0464 19.8264C13.356 20.1054 10.644 20.1054 7.95359 19.8264L7.32472 19.7611C6.58068 19.684 5.98385 19.1118 5.87541 18.3717C5.46599 15.5774 5.46599 12.7384 5.87541 9.94414L6.05037 8.75H7.25Z"/></svg>
-            <span>Open Catalog</span>
-          </button>
+          <a href="catalog.html" target="_blank" class="w-full h-full">
+            <button
+              type="button"
+              class="flex items-center space-x-2 w-full h-full p-4 border border-blue-500 border-2 text-blue-500 hover:bg-blue-700 hover:text-white rounded-lg transition-colors fill-current"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 7.25V7.13012C7.25 4.96238 8.71761 3.06964 10.8171 2.52979C11.5931 2.33024 12.4069 2.33024 13.1829 2.52979C15.2824 3.06964 16.75 4.96238 16.75 7.13013V7.25H18.2511C18.8224 7.25 19.3072 7.66898 19.3901 8.23423L19.6087 9.72668C20.0393 12.6651 20.0393 15.6507 19.6087 18.5891C19.4008 20.0081 18.2565 21.1052 16.83 21.2531L16.2011 21.3183C13.4079 21.608 10.5921 21.608 7.79887 21.3183L7.17 21.2531C5.74346 21.1052 4.59917 20.0081 4.39125 18.5891C3.96071 15.6507 3.96071 12.6651 4.39125 9.72668L4.60993 8.23423C4.69275 7.66898 5.17759 7.25 5.74887 7.25H7.25ZM11.1906 3.98252C11.7216 3.84599 12.2784 3.84599 12.8094 3.98252C14.2458 4.3519 15.25 5.64693 15.25 7.13013V7.25H8.75V7.13012C8.75 5.64693 9.75415 4.3519 11.1906 3.98252ZM7.25 8.75V11C7.25 11.4142 7.58579 11.75 8 11.75C8.41421 11.75 8.75 11.4142 8.75 11V8.75H15.25V11C15.25 11.4142 15.5858 11.75 16 11.75C16.4142 11.75 16.75 11.4142 16.75 11V8.75H17.9496L18.1246 9.94414C18.534 12.7384 18.534 15.5774 18.1246 18.3717C18.0161 19.1118 17.4193 19.684 16.6753 19.7611L16.0464 19.8264C13.356 20.1054 10.644 20.1054 7.95359 19.8264L7.32472 19.7611C6.58068 19.684 5.98385 19.1118 5.87541 18.3717C5.46599 15.5774 5.46599 12.7384 5.87541 9.94414L6.05037 8.75H7.25Z"/></svg>
+              <span>Open Catalog</span>
+            </button>
+          </a>
           <a onclick="parent.postMessage({ 'type': 'page', 'to': 'transactions-form' }, '*')" data-page="form" class="w-full h-full p-4 bg-blue-500 hover:bg-blue-700 text-white rounded-lg transition-colors fill-current">
             <button
             type="button"
@@ -171,9 +174,166 @@
         <div
           class="card bg-white shadow rounded-lg p-3 md:p-6 transition-all duration-200 relative overflow-hidden flex items-start justify-between"
         >
-          <div class="flex-1">
-            <h2 class="font-bold text-gray-700 mb-1">Revenue Overview</h2>
-          </div>
+          <div class="flex-1 flex flex-col">
+            <div class="mb-6">
+                <h2 class="font-bold text-gray-700 mb-1">Revenue Overview</h2>
+                <p class="text-xs text-gray-500">January - December 2026</p>
+            </div>
+
+            <div class="flex h-64 w-full gap-2 md:gap-4 mt-auto">
+                
+                <div class="flex flex-col justify-between text-[10px] sm:text-xs text-gray-400 text-right pb-8 font-medium">
+                    <span>1.000.000</span>
+                    <span>750.000</span>
+                    <span>500.000</span>
+                    <span>250.000</span>
+                    <span>0</span>
+                </div>
+
+                <div class="relative flex-1 flex items-end justify-between gap-1 sm:gap-2">
+                    
+                    <div class="absolute inset-0 pb-8 flex flex-col justify-between pointer-events-none z-0">
+                        <div class="w-full border-t border-gray-200 border-dashed"></div>
+                        <div class="w-full border-t border-gray-200 border-dashed"></div>
+                        <div class="w-full border-t border-gray-200 border-dashed"></div>
+                        <div class="w-full border-t border-gray-200 border-dashed"></div>
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[30%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 300.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Jan</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[45%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 450.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Feb</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[35%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 350.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Mar</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[50%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 500.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Apr</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[40%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 400.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">May</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[65%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 650.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Jun</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[60%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 600.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Jul</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[80%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 800.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Aug</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[70%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 700.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Sep</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[90%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 900.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Oct</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[85%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 850.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Nov</span>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-end flex-1 h-full z-10">
+                        <div class="w-full sm:w-3/4 bg-blue-500 hover:bg-blue-600 rounded-t-sm md:rounded-t-md transition-all h-[100%] relative group cursor-pointer">
+                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-gray-800 text-white text-[10px] sm:text-xs py-1 px-2 rounded pointer-events-none transition-opacity z-20 whitespace-nowrap">
+                                Rp 1.000.000
+                            </div>
+                        </div>
+                        <div class="h-8 flex items-end justify-center w-full">
+                            <span class="text-[10px] sm:text-xs text-gray-500">Dec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <div
           class="card bg-white shadow rounded-lg p-3 md:p-6 transition-all duration-200 relative overflow-hidden flex items-start justify-between"

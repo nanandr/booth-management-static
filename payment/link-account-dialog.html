@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: transparent;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 400;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            /* animation: 0.5s fade-in ease-in-out; */
+        }
+
+        .account-selected {
+            background: #C3DAFE;
+        }
+
+        .account-selected .icon-check {
+            display: block;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="w-screen h-screen p-3 !bg-[#00000050] flex items-center justify-center overflow-y-auto overflow-x-hidden border-box">
+    <div id="dialog-container" class="w-full max-h-full md:w-auto flex flex-col justify-center bg-white rounded-2xl shadow-xl overflow-hidden">
+
+        <!--  -->
+        <!-- <div> -->
+            <!-- Choose Account section -->
+            <div id="choose-section" class="w-full sm:w-[400px] px-7 py-6">
+                <h2 class="text-2xl text-center">Link Account</h2>
+
+                <div class="w-full mt-3 bg-[#EDF2F7] rounded-lg">
+                    <button
+                        class="account-list-item w-full p-2 flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                        <img src="../img/dana-logo.svg" width="24">
+                        <p class="w-full text-lg text-left">Bank ABC</p>
+                        <svg class="icon-check hidden" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18.03 7.97a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06l3.47 3.47 6.47-6.47a.75.75 0 0 1 1.06 0Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button
+                        class="account-list-item w-full p-2 flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                        <img src="../img/dana-logo.svg" width="24">
+                        <p class="w-full text-lg text-left">Bank ABC</p>
+                        <svg class="icon-check hidden" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18.03 7.97a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06l3.47 3.47 6.47-6.47a.75.75 0 0 1 1.06 0Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button
+                        class="account-list-item w-full p-2 flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                        <img src="../img/dana-logo.svg" width="24">
+                        <p class="w-full text-lg text-left">Bank ABC</p>
+                        <svg class="icon-check hidden" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18.03 7.97a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06l3.47 3.47 6.47-6.47a.75.75 0 0 1 1.06 0Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button
+                        class="account-list-item w-full p-2 flex items-center gap-2 cursor-pointer hover:opacity-70 transition-opacity">
+                        <img src="../img/dana-logo.svg" width="24">
+                        <p class="w-full text-lg text-left">Bank ABC</p>
+                        <svg class="icon-check hidden" width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18.03 7.97a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06l3.47 3.47 6.47-6.47a.75.75 0 0 1 1.06 0Z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="pt-4 sm:flex sm:flex-row-reverse">
+                    <button onclick="navigateNextSection()"
+                        class="inline-flex w-full justify-center rounded-xl bg-blue-500 px-3 py-2 text-lg font-semibold text-white hover:bg-blue-500 sm:ml-3 cursor-pointer">
+                        Link
+                    </button>
+                    <button
+                        onclick="closeDialog()"
+                        class="mt-3 inline-flex w-full justify-center rounded-xl bg-white/10 px-3 py-2 text-lg font-semibold border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 sm:mt-0 cursor-pointer">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+            <!-- Register section -->
+            <div id="register-section" class="hidden w-full md:w-[600px] px-7 py-6">
+                <div class="flex gap-2">
+                    <button onclick="navigatePreviousSection()" class="cursor-pointer">
+                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.03 8.53a.75.75 0 1 0-1.06-1.06l-4 4a.748.748 0 0 0 0 1.06l4 4a.75.75 0 1 0 1.06-1.06l-2.72-2.72H18a.75.75 0 0 0 0-1.5H8.31l2.72-2.72Z">
+                            </path>
+                        </svg>
+                    </button>
+                    <img src="../img/dana-logo.svg" width="32">
+                    <div>
+                        <h3 class="text-xl text-[#000000B2]">Register</h3>
+                        <h1 class="text-2xl mt-[-4px]">Bank ABC</h1>
+                    </div>
+                </div>
+
+                <iframe src="https://midtrans.com/passport" class="w-full h-[500px] mt-4 bg-black rounded-2xl"></iframe>
+
+                <div class="pt-4 sm:flex sm:flex-row-reverse">
+                    <button
+                        onclick="navigateNextSection()"
+                        class="inline-flex w-full justify-center rounded-xl bg-blue-500 px-3 py-2 text-lg font-semibold text-white hover:bg-blue-500 cursor-pointer">
+                        Finish
+                    </button>
+                </div>
+            </div>
+
+            <!-- Success section -->
+            <div id="success-section" class="hidden w-full md:w-[400px] px-7 py-6">
+                <div class="w-full flex justify-center gap-3">
+                    <svg width="70" height="70" fill="#38A169" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M18.03 7.97a.75.75 0 0 1 0 1.06l-7 7a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 1 1 1.06-1.06l3.47 3.47 6.47-6.47a.75.75 0 0 1 1.06 0Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <img src="../img/dana-logo.svg" width="52" height="52">
+                </div>
+
+                <h2 class="text-2xl text-center"><strong class="font-semibold">Bank ABC</strong> successfully linked.
+                </h2>
+
+                <div class="pt-4 sm:flex sm:flex-row-reverse">
+                    <button
+                        onclick="closeDialog()"
+                        class="inline-flex w-full justify-center rounded-xl bg-blue-500 px-3 py-2 text-lg font-semibold text-white hover:bg-blue-500 cursor-pointer">
+                        Finish
+                    </button>
+                </div>
+            </div>
+        <!-- </div> -->
+
+    </div>
+
+    <script>
+        const dialogContainer = document.querySelector('#dialog-container');
+        const sections = [
+            document.querySelector('#choose-section'),
+            document.querySelector('#register-section'),
+            document.querySelector('#success-section')
+        ];
+        let currentSection = 0;
+        
+        function setupAccountListItem() {
+            const accountListItems = document.querySelectorAll('.account-list-item');
+            accountListItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    item.classList.add('account-selected');
+
+                    accountListItems.forEach((findItem) => {
+                        if (findItem !== item) {
+                            findItem.classList.remove('account-selected');
+                        }
+                    })
+                });
+            })
+        }
+        setupAccountListItem();
+
+        function navigateNextSection() {
+            if (currentSection < sections.length - 1) {
+                const oldSection = sections[currentSection];
+                const newSection = sections[currentSection + 1];
+
+                oldSection.animate([
+                    { 'transform': 'translateX(-700px)', opacity: 0 }
+                ], {
+                    duration: 500,
+                    easing: 'ease-in-out'
+                }).addEventListener('finish', () => {
+                    oldSection.style.display = 'none';
+                    newSection.style.display = 'block';
+
+                    newSection.animate([
+                        { 'transform': 'translateX(700px)', opacity: 0 },
+                        { 'transform': 'translateX(0)', opacity: 1 }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-in-out'
+                    });
+
+                    const newSectionSize = newSection.getBoundingClientRect();
+                    dialogContainer.animate(
+                        { 'width': `${newSectionSize.width}px`, 'height': `${newSectionSize.height}px` }
+                    , {
+                        duration: 650,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    currentSection++;
+                });
+            }
+        }
+
+        function navigatePreviousSection() {
+            if (currentSection > 0) {
+                const oldSection = sections[currentSection];
+                const newSection = sections[currentSection - 1];
+
+                oldSection.animate([
+                    { 'transform': 'translateX(700px)', opacity: 0 }
+                ], {
+                    duration: 500,
+                    easing: 'ease-in-out'
+                }).addEventListener('finish', () => {
+                    oldSection.style.display = 'none';
+                    newSection.style.display = 'block';
+
+                    newSection.animate([
+                        { 'transform': 'translateX(-700px)', opacity: 0 },
+                        { 'transform': 'translateX(0)', opacity: 1 }
+                    ], {
+                        duration: 500,
+                        easing: 'ease-in-out'
+                    });
+
+                    const newSectionSize = newSection.getBoundingClientRect();
+                    dialogContainer.animate(
+                        { 'width': `${newSectionSize.width}px`, 'height': `${newSectionSize.height}px` }
+                    , {
+                        duration: 650,
+                        easing: 'ease-out',
+                        fill: 'forwards'
+                    });
+
+                    currentSection--;
+                });
+            }
+        }
+
+        function closeDialog() {
+            parent.postMessage({ "type": "link-account-dialog-close" }, "*");
+        }
+
+        function forceContainerSize() {
+            const sectionSize = sections[currentSection].getBoundingClientRect();
+
+            dialogContainer.style.width = `${sectionSize.width}px`;
+            dialogContainer.style.height = `${sectionSize.height}px`;
+        }
+        forceContainerSize();
+    </script>
+</body>
+
+</html>

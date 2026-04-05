@@ -60,7 +60,8 @@
         </div>
 
         <!-- calendar -->
-        <div class="bg-[url('../img/calendar-grid-3.png')] rounded-lg border-[4px] border-[#00000050] border-double">
+        <div id="calendar-container"
+            class="bg-[url('../img/calendar-grid-3.png')] rounded-lg border-[4px] border-[#00000050] border-double">
             <!-- 2024 -->
             <div class="flex items-center gap-4 py-1">
                 <div class="w-full h-[18px] bg-[url('../img/calendar-decor.png')] opacity-50"></div>
@@ -251,11 +252,14 @@
     </div>
 
     <script>
+        const calendarContainer = document.querySelector('#calendar-container');
         const monthCards = document.querySelectorAll('.month-card');
 
         function setupMonthCards() {
             monthCards.forEach((card) => {
                 card.addEventListener('click', () => {
+                    const cardRect = card.getBoundingClientRect();
+                    localStorage.setItem('month-card-rect', JSON.stringify(cardRect));
                     parent.postMessage({ 'type': 'page', 'to': 'transactions-week' }, '*');
                 });
             });
